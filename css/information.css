@@ -227,7 +227,7 @@
     border-top: dashed 1.1rem var(--col-black);
     padding: var(--p);
     min-height: 150px;
-    max-height: 500px;
+    max-height: auto;
 }
 
 .team__cards-item img {
@@ -263,6 +263,7 @@
 
 .team__cards-item ul {
     text-wrap: wrap;
+    margin-bottom: var(--m);
 }
 
 .team__cards-item li {

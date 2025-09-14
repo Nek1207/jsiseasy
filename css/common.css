@@ -50,32 +50,7 @@ html::-webkit-scrollbar {
     --col-trans-yellow: #F7DF1EAA;
     --col-trans-light-yellow: #FFF28CAA;
 
-    /* размеры шрифта */
-    --t-largest: 4rem;
-    --t-larger: 3rem;
-    --t-large: 2rem;
-    --t-medium: 1.5rem;
-    --t-normal: 1rem;
-    --t-small: 0.75rem;
-    --t-smaller: 0.5rem;
-    --t-smallest: 0.25rem;
-
-    /* размеры отступов */
-    --m-large: 1.5rem;
-    --m-normal: 1rem;
-    --m-small: 0.5rem;
-    --m-smallest: 0.25rem;
-
-    --p-large: 1.5rem;
-    --p-normal: 1rem;
-    --p-small: 0.5rem;
-    --p-smallest: 0.25rem;
-    
-    --g-large: 1.5rem;
-    --g-normal: 1rem;
-    --g-small: 0.5rem;
-    --g-smallest: 0.25rem;
-
+    /* размеры шрифтов */
     --fz-price: clamp(2.5rem, 2%, 4.5rem);
     --fz-title: clamp(2rem, 2%, 4rem);
     --fz-subtitle: clamp(1.5rem, 2%, 3rem);
@@ -87,9 +62,11 @@ html::-webkit-scrollbar {
     --fz-h7: clamp(0.3rem, 2%, 0.6rem);
     --fz-h8: clamp(0.2rem, 2%, 0.5rem);
 
+    /* отступы */
     --m: clamp(8px, 2vw + 4px, 40px);
     --g: clamp(8px, 2vw + 4px, 40px);
     --p: clamp(8px, 2vw + 4px, 40px);
+    --o: none;
 
 }
 
@@ -153,20 +130,6 @@ p {
     color: var(--col-white);
 }
 
-/* span:hover,
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-p:hover,
-input:hover,
-ul:hover,
-li:hover,
-div:hover {
-    cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default; 
-} */
-
-
 
 h1, h2, h3, h4, h5, h6, p, a {
     transition: all .3s;
@@ -179,6 +142,10 @@ section {
     padding: var(--p);
     min-height: 500px;
     height: auto;
+}
+
+section:last-child {
+    margin-bottom: 5rem;
 }
 
 button {
@@ -393,5 +360,19 @@ th, td {
     font-weight: 600;
     font-size: var(--fz-subtitle);
     /* border: .5rem solid var(--col-white); */
+}
+
+.smoothscrolling {
+    transition: all 1s;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 

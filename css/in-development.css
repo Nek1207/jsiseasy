@@ -2,7 +2,7 @@
 
 
 .indevelopment {
-    min-height: 800px;
+    min-height: 900px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -11,6 +11,7 @@
     width: 100%;  
     gap: var(--g);
     padding: var(--p);
+    padding-top: 5rem;
 }
 
 .indevelopment__texts {
