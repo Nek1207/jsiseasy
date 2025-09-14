@@ -708,6 +708,10 @@
         border-radius: 0;
         border: none;
     }
+    .team__subtitle {
+        font-size: var(--fz-description);
+        text-align: justify;
+    }
 
     .courses h1 {
         margin-bottom: 1.5rem;
