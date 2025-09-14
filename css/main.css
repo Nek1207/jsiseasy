@@ -364,6 +364,7 @@
         display: none;
     }
     .appdesc__item:last-child img:first-child {
+        width: 60%;
         rotate: 45deg;
     }
     .whyarewe__cards {
