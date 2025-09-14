@@ -38,7 +38,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--g);
+    gap: .5rem;
     width: 20%;
 }
 
@@ -155,53 +155,7 @@
     filter: brightness(30);
 }
 
-@media (max-width: 3000px) {
-    .footer__item h1 {
-        font-size: var(--fz-subtitle)
-    }
-    .footer__nav-item {
-        font-weight: 600;
-        font-size: var(--fz-subtitle);
-        gap: var(--g);
-    }
-    .footer__description-item {
-        font-weight: 600;
-        font-size: var(--fz-subtitle);
-    }
-    .footer__information-item p {
-        font-size: var(--fz-subtitle);
-    }
-    .footer__links p {
-        font-size: var(--fz-subtitle);
-    }
-
-
-}
-
-@media (max-width: 1700px) {
-    .footer {
-        flex-wrap: wrap;
-        gap: var(--g);
-    }
-    .footer__nav {
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: var(--g);
-        width: 100%;
-        padding: var(--p);
-    }
-    .footer__links,
-    .footer__description {
-        margin-top: 3rem;
-        width: 30%;
-    }
-    .footer__item {
-        width: 30%;
-    }
-    .footer__item img {
-        width: 40%;
-    }
-    .footer__item h1 {
+.footer__item h1 {
         font-size: var(--fz-description)
     }
     .footer__nav-item {
@@ -220,6 +174,55 @@
         font-size: var(--fz-description);
         
     }
+@media (max-width: 3000px) {
+    .footer__item h1 {
+        font-size: var(--fz-description)
+    }
+    .footer__nav-item {
+        font-weight: 600;
+        font-size: var(--fz-description);
+          
+    }
+    .footer__description-item {
+        font-weight: 600;
+        font-size: var(--fz-description);
+    }
+    .footer__information-item p {
+        font-size: var(--fz-description);
+    }
+    .footer__links p {
+        font-size: var(--fz-description);
+        
+    }
+
+
+}
+
+@media (max-width: 1700px) {
+    .footer {
+        flex-wrap: wrap;
+        gap: var(--g);
+    }
+    .footer__nav {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: var(--g);
+        width: 100%;
+        padding: var(--p);
+        
+    }
+    .footer__links,
+    .footer__description {
+        margin-top: 3rem;
+        width: 30%;
+    }
+    .footer__item {
+        width: 30%;
+    }
+    .footer__item img {
+        width: 40%;
+    }
+    
 }
 
 
