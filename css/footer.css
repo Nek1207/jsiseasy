@@ -218,6 +218,7 @@
     }
     .footer__links p {
         font-size: var(--fz-description);
+        
     }
 }
 
