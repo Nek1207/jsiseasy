@@ -1,0 +1,129 @@
+/* стили страницы "В разработке" */
+
+
+.indevelopment {
+    min-height: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    width: 100%;  
+    gap: var(--g);
+    padding: var(--p);
+}
+
+.indevelopment__texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--g);
+}
+
+.indevelopment h1 {
+    text-align: start;
+    font-weight: 800;
+    font-size: var(--fz-price);    
+}
+
+.indevelopment img {
+    z-index: -1;
+    width: 35%;
+    animation: infinite ease-in-out 1s rotate;
+}
+
+@keyframes rotate {
+    0% { rotate: -180deg; }
+}
+
+.line2 {
+    color: var(--col-white);
+}
+
+@media (max-width: 3000px) {
+    .indevelopment img {
+        z-index: -1;
+        width: 25%;
+        animation: infinite ease-in-out 1s rotate;
+    }
+}
+
+@media (max-width: 1600px) {
+    .indevelopment {
+        min-height: 950px;
+        height: auto;
+        
+    }
+    .indevelopment img {
+        z-index: -1;
+        width: 45%;
+        animation: infinite ease-in-out 1s rotate;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .indevelopment {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        min-height: 950px;
+        height: auto;
+        
+    }
+    .indevelopment img {
+        z-index: -1;
+        width: 55%;
+        animation: infinite ease-in-out 1s rotate;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .indevelopment {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: center;
+        padding-top: 10rem;
+        min-height: 500px;
+        height: auto;
+        
+    }
+    .indevelopment h1 {
+        font-size: var(--fz-subtitle);
+    }
+    .indevelopment img {
+        z-index: -1;
+        width: 75%;
+        animation: infinite ease-in-out 1s rotate;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .indevelopment {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: center;
+        padding-top: 10rem;
+        min-height: 500px;
+        height: auto;
+        
+    }
+    .indevelopment h1 {
+        font-size: var(--fz-description);
+    }
+    .line2 {
+        border-bottom: .5rem double var(--col-white);
+    }
+    .indevelopment img {
+        z-index: -1;
+        width: 75%;
+        animation: infinite ease-in-out 1s rotate;
+    }
+
+}

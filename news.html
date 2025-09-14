@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости # JavaScript — это просто! (build202509141)</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="icon" type="image/x-icon" href="./media/icons/logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <label for="burger-menu-toggle" class="burger-icon">☰</label>
+        <input type="checkbox" id="burger-menu-toggle" hidden>
+        <img class="header__logo" src="./media/icons/logo.svg" alt="logo">
+        <h1 class="header__title">JavaScript — это просто!</h1>
+        <nav class="header__nav">
+            <a href="./main.html" class="header__nav-item">Главная</a>
+            <a href="./news.html" class="header__nav-item">Новости</a>            
+            <a href="./information.html" class="header__nav-item">Информация</a>        
+        </nav>
+        <div href="./account.html" class="header__account">
+            <a href="#!" class="header__account-item"><img src="./media/icons/navigation/nav_notifications.svg" alt="notifications"></a>
+            <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account_header.svg" alt="account"></a>
+            <a href="#!" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></a>
+        </div>
+    </header>
+
+
+
+    <main class="main news">
+        <h1>Новости</h1>
+
+        <section class="latestnews">
+                <div class="latestnews__item">
+                    <img src="./media/images/content12.png" alt="picture" class="picture">
+                    <div class="texts">
+                        <h2>Новый курс опубликован!</h2>
+                        <div class="texts__info">
+                            <p>12 марта 2025 года</p>
+                            <div class="views">
+                                <img src="./media/icons/content/watches.svg" alt="views">
+                                <p>21,419</p>
+                            </div>
+                            <div class="comments">
+                                <img src="./media/icons/content/comment.svg" alt="comments">
+                                <p>386</p>
+                            </div>
+                        </div>
+                        <p class="texts__description">Всем доброго времени суток! Мы, plteam, спешим порадовать вас в грядущем обновлении приложения новым курсом обучения! Вас ждёт большое количество новых интересных и сложных заданий, а также подробных видеоуроков...<a href="#!" class="more">подробнее</a></p>
+                    </div>
+                </div>
+
+                <div class="latestnews__item">
+                    <img src="./media/images/content13.png" alt="picture" class="picture">
+                    <div class="texts">
+                        <h2>Решение частых ошибок</h2>
+                        <div class="texts__info">
+                            <p>21 февраля 2025 года</p>
+                            <div class="views">
+                                <img src="./media/icons/content/watches.svg" alt="views">
+                                <p>88,329</p>
+                            </div>
+                            <div class="comments">
+                                <img src="./media/icons/content/comment.svg" alt="comments">
+                                <p>9,672</p>
+                            </div>
+                        </div>
+                        <p class="texts__description">В этой статье продемонстрированы наиболее часто возникающие ошибки при написании кода на языке программирования JavaScript и их решение с пошаговым объяснением...<a href="#!" class="more">подробнее</a></p>
+                    </div>
+                </div>
+                
+                <div class="latestnews__item">
+                    <img src="./media/images/content14.png" alt="picture" class="picture">
+                    <div class="texts">
+                        <h2>Версия мобильного приложения 2.0: слухи и даты</h2>
+                        <div class="texts__info">
+                            <p>8 февраля 2025 года</p>
+                            <div class="views">
+                                <img src="./media/icons/content/watches.svg" alt="views">
+                                <p>203,400</p>
+                            </div>
+                            <div class="comments">
+                                <img src="./media/icons/content/comment.svg" alt="comments">
+                                <p>2,539</p>
+                            </div>
+                        </div>
+                        <p class="texts__description">Какие новые функции и возможности ожидают нас во второй версии приложения “JavaScript — это просто!”? На какой стадии разработки она находится, и когда возможен её выход?...<a href="#!" class="more">подробнее</a></p>
+                    </div>
+                </div>
+
+                <div class="latestnews__item">
+                    <img src="./media/images/content15.png" alt="picture" class="picture">
+                    <div class="texts">
+                        <h2>Лучшие JS-фреймворки</h2>
+                        <div class="texts__info">
+                            <p>31 декабря 2024 года</p>
+                            <div class="views">
+                                <img src="./media/icons/content/watches.svg" alt="views">
+                                <p>539,126</p>
+                            </div>
+                            <div class="comments">
+                                <img src="./media/icons/content/comment.svg" alt="comments">
+                                <p>18,777</p>
+                            </div>
+                        </div>
+                        <p class="texts__description">Всех приветствуем в нашей предновогодней статье, в которой мы традиционно каждый год подводим итоги уходящего года. Сейчас вы узнаете, какие фреймворки для JavaScript оказались самыми лучшими за 2024 год...<a href="#!" class="more">подробнее</a></p>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__item">
+            <img class="footer__logo" src="./media/icons/logo.svg" alt="logo">
+            <h1 class="footer__title">JavaScript — это просто!</h1>
+        </div>
+        <nav class="footer__nav">
+            <a href="./main.html" class="footer__nav-item">Главная</a>
+            <a href="./news.html" class="footer__nav-item">Новости</a>
+            <a href="./information.html" class="footer__nav-item">Информация</a>
+            <a href="./account.html" class="footer__nav-item">Аккаунт</a>
+            <a href="./in-development.html" class="footer__nav-item">В разработке</a>
+            <a href="./registration.html" class="footer__nav-item">Регистрация</a>
+            <a href="./authorization.html" class="footer__nav-item">Авторизация</a>
+            <a href="./administrator.html" class="footer__nav-item">Администратор</a>
+            <a href="./structure/header.html" class="footer__nav-item">Шапка</a>
+            <a href="./structure/footer.html" class="footer__nav-item">Подвал</a>
+            <a href="./index.html" class="footer__nav-item">index.html</a>
+        </nav>
+        <div class="footer__information">
+            <div class="footer__information-item">
+                <p>Дата последнего обновления</p>
+                <p>12 марта 2025 года 09:32 GMT+5</p>
+            </div>
+            <div class="footer__information-item">
+                <p>Разработано командой разработчиков</p>
+                <p>plteam</p>
+            </div>
+            <div class="footer__information-item">
+                <p>Главный разработчик</p>
+                <p>PROJECT NEK</p>
+            </div>
+            <div class="footer__information-item">
+                <p>Сайт команды</p>
+                <p>www.plteam.com</p>
+            </div>
+        </div>
+        <div class="footer__links">
+            <p>Следите за нами в соцсетях!</p>
+            <div class="footer__links-icons">
+                <a target="_blank" href="https://projectnek.bandcamp.com/"><img src="./media/icons/social/bandcamp.svg" alt="social-icon"></a>
+                <a target="_blank" href="https://github.com/Nek1207"><img src="./media/icons/social/square-github.svg" alt="social-icon"></a>
+                <a target="_blank" href="./in-development.html"><img src="./media/icons/social/square-instagram.svg" alt="social-icon"></a>
+                <a target="_blank" href="https://www.youtube.com/@project_nek.official"><img src="./media/icons/social/square-youtube.svg" alt="social-icon"></a>
+                <a target="_blank" href="https://vk.com/project_nek.official"><img src="./media/icons/social/square_vk.svg" alt="social-icon"></a>
+            </div>
+        </div>
+        <div class="footer__description">
+            <p class="footer__description-item">(c) 2025, PROJECT NEK</p>
+            <p class="footer__description-item">Все Права Защищены</p>
+            <p class="footer__description-item">ИНН: 49039432049032</p>
+            <p class="footer__description-item">КОР: 30167391035802</p>
+        </div>
+    </footer>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+
+</html>

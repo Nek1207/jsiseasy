@@ -1,0 +1,241 @@
+/* стили страницы "Новости" */
+
+.news {
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;    
+    gap: var(--g);
+}
+
+.news h1 {
+    color: var(--col-white);
+    text-align: center;
+}
+
+.latestnews {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--g);
+    min-height: 700px;
+    width: 100%;
+    padding: var(--p);
+}
+
+
+.latestnews__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    width: 70%;
+    min-height: 200px;
+    height: auto;
+    padding: var(--p);
+    gap: var(--g);
+    background: var(--col-dark-gray);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top: 1rem solid var(--col-light-gray);
+}
+
+.picture {
+    width: 35%;
+    border: 15px dashed var(--col-white);
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    gap: var(--g);
+    width: 65%;
+}
+
+.texts h2 {
+    font-size: var(--fz-title);
+    
+}
+
+.texts__description {
+    text-wrap: wrap;
+    text-align: justify;
+    width: 100%;
+}
+
+.texts__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    /* gap: var(--g); */
+}
+
+.texts__info p {
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+.views,
+.comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+    width: 20%;
+}
+
+.views img,
+.comments img {
+    width: 25%;
+}
+
+.more {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.more:hover {
+    color: var(--col-light-yellow);
+    cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer;
+}
+
+.more:active {
+    color: var(--col-yellow);
+    cursor: url("../media/icons/cursors/cursor_diamond_active.png"), default;
+}
+
+@media (max-width: 1300px) {
+    .news {
+        width: 100%;
+    }
+    .latestnews {
+        width: 100%;
+    }
+    .latestnews__item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .texts h2 {
+        font-size: var(--fz-subtitle);
+    }
+
+    .texts__description {
+        text-wrap: wrap;
+        text-align: justify;
+        width: 100%;
+        font-size: var(--fz-description);
+    }
+
+    .texts__info p {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        font-size: var(--fz-description);
+        /* gap: var(--g); */
+    }
+
+    .views p,
+    .comments p {
+        font-size: var(--fz-description);
+    }
+
+    .texts__description {
+        font-weight: 400;
+        margin-right: 1rem;
+        font-size: var(--fz-h3);
+    }
+        
+    .latestnews__item {
+        width: 100%;
+        min-height: 200px;
+        height: auto;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border-top: .5rem solid var(--col-light-gray);
+    }
+
+    .picture {
+        width: 50%;
+        border: .5rem dashed var(--col-white);
+    }
+    .views {
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .picture {
+        width: 35%;
+    }
+    .views {
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .latestnews__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .picture {
+        width: 75%;
+    }
+    .texts {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .views {
+        margin-right: 0rem;
+    }
+    .texts h2 {
+        width: 100%;
+        text-align: center;
+    }
+    .texts__info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .views {
+        margin-right: 1.5rem;
+    }
+    /* .texts__info {
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .texts__info p {
+        font-size: var(--fz-h4);
+    }
+
+    .views p,
+    .comments p {
+        font-size: var(--fz-h4);
+    }
+     
+}

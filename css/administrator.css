@@ -1,0 +1,411 @@
+/* стили страницы "Администратор" */
+
+.administrator {
+    min-height: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: var(--g);
+}
+
+.administrator h1 {
+    font-size: var(--fz-title);
+    color: var(--col-white);
+    text-align: center;
+    margin: 10rem auto 0 auto;
+}
+
+.orders,
+.users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--g);
+    padding: var(--p);
+    width: 100%;
+
+}
+
+.orders__inner,
+.users__inner {
+    width: 100%;
+}
+
+.orders__inner-table th:nth-child(1),
+.orders__inner-table td:nth-child(1) {
+    width: 5%;
+}
+
+.orders__inner-table th:nth-child(2),
+.orders__inner-table td:nth-child(2) {
+    width: 15%;
+}
+
+.orders__inner-table th:nth-child(3),
+.orders__inner-table td:nth-child(3) {
+    width: 15%;
+}
+
+.orders__inner-table th:nth-child(4),
+.orders__inner-table td:nth-child(4) {
+    width: 15%;
+}
+
+.orders__inner-table th:nth-child(5),
+.orders__inner-table td:nth-child(5) {
+    width: 15%;
+}
+
+.orders__inner-table th:nth-child(6),
+.orders__inner-table td:nth-child(6) {
+    width: 15%;
+}
+
+.orders__inner-table th:nth-child(7),
+.orders__inner-table td:nth-child(7) {
+    width: 10%;
+}
+
+.orders__inner-table th:nth-child(8),
+.orders__inner-table td:nth-child(8) {
+    width: 10%;
+}
+
+
+.orders__inner-table thead th,
+.users__inner-table thead th {
+    font-weight: 800;
+}
+
+
+.orders__inner-table th,
+.orders__inner-table td,
+.users__inner-table th,
+.users__inner-table td {
+    border: none;
+    text-align: start;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: var(--fz-description);
+    /* border: .5rem solid var(--col-white); */
+}
+
+
+
+.users__inner-table th:nth-child(1),
+.users__inner-table td:nth-child(1) {
+    width: 5%;
+}
+
+.users__inner-table th:nth-child(2),
+.users__inner-table td:nth-child(2) {
+    width: 20%;
+}
+
+.users__inner-table th:nth-child(3),
+.users__inner-table td:nth-child(3) {
+    width: 20%;
+}
+
+.users__inner-table th:nth-child(4),
+.users__inner-table td:nth-child(4) {
+    width: 20%;
+}
+
+.users__inner-table th:nth-child(5),
+.users__inner-table td:nth-child(5) {
+    width: 20%;
+}
+
+.users__inner-table th:nth-child(6),
+.users__inner-table td:nth-child(6) {
+    width: 15%;
+}
+
+
+
+
+.change {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--g);
+    padding: var(--p);
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+}
+
+.change__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--g);
+}
+
+.change h1 {
+    font-size: var(--fz-title);
+    color: var(--col-white);
+    text-align: center;
+    margin: var(--m);
+    /* margin-bottom: 0 auto 2rem auto; */
+}
+
+.change__inner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--g);
+    padding: var(--p);
+    width: 50%;
+    min-height: 400px;
+    height: auto;
+    border-radius: 2rem;
+    border: 10px dashed var(--col-white);
+    background: var(--col-dark-gray);
+}
+
+.change__item-id,
+.change__item-status,
+.change__item-role {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: var(--g);
+    width: 100%;
+}
+
+.change__item-id label,
+.change__item-status label,
+.change__item-role label {
+    text-align: end;
+    font-size: var(--fz-subtitle);
+    font-weight: 600;
+    width: 50%;
+}
+
+
+
+input,
+select {
+   transition: all .3s; 
+   min-width: 100px;
+   width: 50%;
+   min-height: 1rem;
+   height: auto;
+   font-size: var(--fz-description);
+   font-weight: 600;
+   padding: 0.5rem;
+   border-radius: 0.25em;
+   font-family: "Montserrat", sans-serif;
+   cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+   border: inset solid 4px var(--col-dark-yellow); 
+}
+
+
+input:hover,
+select:hover {
+   transition: all .3s; 
+   background: var(--col-light-yellow);
+
+}
+
+input:focus
+select:focus {
+   transition: all .3s;
+   background: var(--col-light-yellow);
+   font-size: var(--fz-subtitle);
+   cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer; 
+}
+
+label {
+    font-size: var(--fz-subtitle);
+}
+
+input[type="submit"] {
+   transition: all .3s; 
+   width: 50%;
+   min-width: 100px;
+   min-height: 2rem;
+   height: auto;
+   font-size: var(--fz-subtitle);
+   font-weight: 800;
+   padding: 0.5rem;
+   border-radius: 0.25em;
+   font-family: "Montserrat", sans-serif;
+   cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+   border: inset solid 4px var(--col-dark-yellow); 
+}
+
+input[type="submit"]:hover {
+    transition: all 3.s;
+    background: var(--col-light-yellow);
+}
+
+input[type="submit"]:active {
+    transition: all 3.s;
+    background: var(--col-dark-yellow);
+}
+
+@media (max-width: 1400px) {
+    .orders__inner-table th,
+    .orders__inner-table td,
+    .users__inner-table th,
+    .users__inner-table td {
+        padding: .5rem;
+        font-size: var(--fz-h5);
+        /* border: .5rem solid var(--col-white); */
+    }
+    .change__inner-item h1 {
+        font-size: var(--fz-subtitle);
+    }
+    .change__inner-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        min-height: 350px;
+        height: auto;
+    }
+    .change__item-id label,
+    .change__item-status label,
+    .change__item-role label {
+        text-align: end;
+        font-size: var(--fz-subtitle);
+        font-weight: 600;
+        width: 65%;
+    }
+    input,
+    select,
+    input[type="submit"] {
+        transition: all .3s; 
+        /* min-width: 200px; */
+        width: 35%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .change__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--g);
+        width: 100%;
+    }
+    .change__inner-item h1 {
+        font-size: var(--fz-subtitle);
+    }
+    .change__inner-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 350px;
+        width: 100%;
+        height: auto;
+    }
+    .change__item-id label,
+    .change__item-status label,
+    .change__item-role label {
+        text-align: end;
+        font-size: var(--fz-subtitle);
+        font-weight: 600;
+        width: 40%;
+    }
+    input,
+    select,
+    input[type="submit"] {
+        transition: all .3s; 
+        /* min-width: 200px; */
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .administrator h1 {
+        font-size: var(--fz-subtitle);
+    }
+    h2 {
+        font-size: var(--fz-description);
+    }
+    .orders__inner-table th,
+    .orders__inner-table td,
+    .users__inner-table th,
+    .users__inner-table td {
+        flex-wrap: wrap;
+        word-break: break-all;
+        text-align: justify;
+        padding: .25rem;
+        font-size: var(--fz-h6);
+        /* border: .5rem solid var(--col-white); */
+    }
+}
+
+@media (max-width: 600px) {
+    .change__inner-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 250px;
+        width: 100%;
+        height: auto;
+    }
+    .change__item-id label,
+    .change__item-status label,
+    .change__item-role label {
+        text-align: end;
+        font-size: var(--fz-subtitle);
+        font-weight: 600;
+        width: 55%;
+    }
+    input,
+    select,
+    input[type="submit"] {
+        transition: all .3s; 
+        /* min-width: 200px; */
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .change__inner-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 250px;
+        width: 100%;
+        height: auto;
+    }
+    .change__inner-item h1 {
+        font-size: var(--fz-description);
+    }
+    .change__item-id label,
+    .change__item-status label,
+    .change__item-role label {
+        text-align: end;
+        font-size: var(--fz-description);
+        font-weight: 600;
+        width: 40%;
+    }
+    input,
+    select,
+    input[type="submit"] {
+        transition: all .3s; 
+        /* min-width: 200px; */
+        width: 60%;
+        font-size: var(--fz-h4);
+    }
+}

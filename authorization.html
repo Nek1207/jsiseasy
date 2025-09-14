@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация # JavaScript — это просто! (build202509141)</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/authorization.css">
+    <link rel="icon" type="image/x-icon" href="./media/icons/logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body class="bg">
+
+
+    <a href="./main.html" class="toMain">
+        <img class="toMain-logo" src="./media/icons/logo.svg" alt="logo">
+        <!-- <h2>JavaScript — это просто!</h2> -->
+    </a>
+
+    <h1>Авторизация</h1>
+
+    <form action="#!" method="POST" class="authorization-form">
+        <div class="authorization-form__item">
+            <label for="login">Логин</label>
+            <input id="login" name="login" type="text" placeholder="Укажите здесь Ваш логин..." required>
+        </div>
+        <div class="authorization-form__item">
+            <label for="pass">Пароль</label>
+            <input id="pass" name="pass" type="password" placeholder="Укажите здесь Ваш пароль..." required>
+        </div>
+        <p><input id="agree" name="agree" type="checkbox" required>Запомнить меня</p>
+   
+        <div class="authorization-form__item">
+            <input class="toReg" type="submit" value="Авторизоваться">
+            <div class="toReg">
+                <p>Нет аккаунта?</p>
+                <a class="registration-link" href="./registration.html">Зарегистрироваться</a>
+            </div>
+        </div>
+        
+    </form>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+
+</html>

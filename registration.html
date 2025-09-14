@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация # JavaScript — это просто! (build202509141)</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/registration.css">
+    <link rel="icon" type="image/x-icon" href="./media/icons/logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body class="bg">
+
+    <a href="./main.html" class="toMain">
+        <img class="toMain-logo" src="./media/icons/logo.svg" alt="logo">
+        <!-- <h2>JavaScript — это просто!</h2> -->
+    </a>
+
+    <h1>Регистрация</h1>
+
+    <form action="#!" method="POST" class="registration-form">
+        <div class="registration-form__item">
+            <label for="login">Логин <span class="required">*</span></label>
+            <input id="login" name="login" type="text" placeholder="Укажите здесь Ваш логин..." required>
+        </div>
+        <div class="registration-form__item">
+            <label for="email">E-mail <span class="required">*</span></label>
+            <input id="email" name="email" type="email" placeholder="Укажите здесь Вашу электронную почту..."  required>
+        </div>
+        <div class="registration-form__item">
+            <label for="phone">Номер телефона <span class="required">*</span></label>
+            <input id="phone" name="phone" type="tel" placeholder="Укажите здесь Ваш номер телефона..." required>
+        </div>
+        <div class="registration-form__item">
+            <label for="pass">Пароль <span class="required">*</span></label>
+            <input id="pass" name="pass" type="password" placeholder="Придумайте и укажите здесь Ваш пароль..." required>
+        </div>
+        <div class="registration-form__item">
+            <label for="passrepeat">Повтор пароля <span class="required">*</span></label>
+            <input id="passrepeat" name="passrepeat" type="password" placeholder="Повторите здесь указанный Вами пароль..." required>
+        </div>
+        <p><span class="required">*</span>  — обязательное для заполнения поле.</p>
+        <p><input id="agree" name="agree" type="checkbox" required>Я принимаю <span class="for-agree">Условия использования</span> и соглашаюсь с <span class="for-agree">Политикой конфиденциальности</span>.</p>
+        <div class="registration-form__item">
+            <input class="toReg" type="submit" value="Зарегистрироваться">
+            <div class="toReg">
+                <p>Уже есть аккаунт?</p><a class="authorization-link" href="./authorization.html">Авторизоваться</a>
+            </div>
+        </div>
+        
+    </form>
+
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+
+</html>

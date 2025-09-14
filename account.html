@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аккаунт # JavaScript — это просто! (build202509141)</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/account.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <link rel="icon" type="image/x-icon" href="./media/icons/logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <label for="burger-menu-toggle" class="burger-icon">☰</label>
+        <input type="checkbox" id="burger-menu-toggle" hidden>
+        <img class="header__logo" src="./media/icons/logo.svg" alt="logo">
+        <h1 class="header__title">JavaScript — это просто!</h1>
+        <nav class="header__nav">
+            <a href="./main.html" class="header__nav-item">Главная</a>
+            <a href="./news.html" class="header__nav-item">Новости</a>            
+            <a href="./information.html" class="header__nav-item">Информация</a>        
+        </nav>
+        <div href="./account.html" class="header__account">
+            <a href="#!" class="header__account-item"><img src="./media/icons/navigation/nav_notifications.svg" alt="notifications"></a>
+            <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account_header.svg" alt="account"></a>
+            <a href="#!" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></a>
+        </div>
+    </header>
+
+
+
+    <main class="main account">
+        <h1>Здравствуйте, <span class="yellow">PROJECT NEK<img src="./media/icons/content/star.svg" class="star" alt="star"></span>!</h1>
+        <section class="stats">
+            <div class="stats__item">
+                <div class="stats__item-avatar-n-levels">
+                    <!-- <div class="stats__item-avatar">
+                        <img src="./media/images/bydlo_s_sortirovki_logo.png" alt="account_logo">
+                        <a href="./in-development.html">Изменить фото</a>
+                    </div> -->
+                    <div class="stats__item-levels">
+                        <div class="stats__item-level">
+                            <img src="./media/icons/content/level_progress.svg" alt="level-progress">
+                            <h1>97</h1>
+                        </div>
+                        <div class="stats__item-level">
+                            <h2>Уровень</h2>
+                            <p>EXP: 72,599/75,000</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="stats__item-counts">
+                    <li>Пройденных курсов: <span class="semibold">3</span></li>
+                    <li>Решенных задач: <span class="semibold">29,120</span></li>
+                    <li>Просмотренных уроков: <span class="semibold">1,400</span></li>
+                    <li>Предложенных решений: <span class="semibold">19,593</span></li>
+                    <li>Дней изучения: <span class="semibold">1,955</span></li>
+                </ul>
+            </div>
+            <div class="line-vertical"></div>
+            <div class="line"></div>
+            <div class="stats__item">
+                <div class="stats__item-total">
+                    <label for="login">Логин</label>
+                    <input id="login" name="login" type="text" placeholder="PROJECT NEK">
+                </div>
+                <div class="stats__item-total">
+                    <label for="description">Описание профиля</label>
+                    <textarea cols="3" rows="5" placeholder="I’m just studying here :) find me on:
+                    VK - vk.com/project_nek.official
+                    TG - t.me/@project_nek_official
+                    YT - youtube.com/@project_nek.official" name="description" id="description"></textarea>
+                </div>
+                <div class="stats__item-total">
+                    <label for="email">Электронная почта</label>
+                    <input id="email" name="email" type="email" placeholder="Nek1207@yandex.ru">
+                </div>
+                <div class="stats__item-total">
+                    <label for="phone">Номер телефона</label>
+                    <input id="phone" name="phone" type="tel" placeholder="+7 (953) 049-14-08">
+                </div>
+                <div class="stats__item-total">
+                    <label for="pass">Пароль</label>
+                    <input id="pass" name="pass" type="password" placeholder="**********">
+                </div>
+            </div>
+        </section>
+
+        <section class="medals">
+            <h1>Ваши достижения</h1>
+            <div class="medals__inner">
+                <div class="medals__inner-item">
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medal-solid1.svg" alt="medal"></div>
+                    <div class="medals__inner-item-texts">
+                        <h2><span class="purple">Veteran</span></h2>
+                        <p>2025</p>
+                    </div>
+                </div>
+                <div class="medals__inner-item">
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medal-solid2.svg" alt="medal"></div>
+                    <div class="medals__inner-item-texts">
+                        <h2><span class="red">Master's degree</span></h2>
+                        <p>2024</p>
+                    </div>
+                </div>
+                <div class="medals__inner-item">
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals_level3.svg" alt="medal"></div>
+                    <div class="medals__inner-item-texts">
+                        <h2><span class="gold">Pro III</span></h2>
+                        <p>2022</p>
+                    </div>
+                </div>
+
+                <div class="medals__inner-item">
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals_level2.svg" alt="medal"></div>
+                    <div class="medals__inner-item-texts">
+                        <h2><span class="gray">Commentator</span></h2>
+                        <p>2022</p>
+                    </div>
+                </div>
+                <div class="medals__inner-item">
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals_level1.svg" alt="medal"></div>
+                    <div class="medals__inner-item-texts">
+                        <h2><span class="gold">Pro II</span></h2>
+                        <p>2020</p>
+                    </div>
+                </div>
+                <div class="medals__inner-item">
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/star_alternative.svg" alt="medal"></div>
+                    <div class="medals__inner-item-texts">
+                        <h2><span class="gold">Pro I</span></h2>
+                        <p>2019</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="myorders">
+            <h1>Ваши заявки</h1>
+            <div class="myorders__inner">
+                <table class="myorders__inner-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Наименование заявки</th>
+                            <th>Дата подачи</th>
+                            <th>Стоимость</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>Курс "JSknower3"</td>
+                            <td>11.09.2025 13:01 (GMT+5)</td>
+                            <td>4990</td>
+                            <td class="rejected">Отклонено</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Курс "JSknower2"</td>
+                            <td>11.09.2025 11:38 (GMT+5)</td>
+                            <td>3490</td>
+                            <td class="in-process">В процессе</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Курс "JSknower1"</td>
+                            <td>11.09.2025 03:54 (GMT+5)</td>
+                            <td>1990</td>
+                            <td class="success">Выполнено</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__item">
+            <img class="footer__logo" src="./media/icons/logo.svg" alt="logo">
+            <h1 class="footer__title">JavaScript — это просто!</h1>
+        </div>
+        <nav class="footer__nav">
+            <a href="./main.html" class="footer__nav-item">Главная</a>
+            <a href="./news.html" class="footer__nav-item">Новости</a>
+            <a href="./information.html" class="footer__nav-item">Информация</a>
+            <a href="./account.html" class="footer__nav-item">Аккаунт</a>
+            <a href="./in-development.html" class="footer__nav-item">В разработке</a>
+            <a href="./registration.html" class="footer__nav-item">Регистрация</a>
+            <a href="./authorization.html" class="footer__nav-item">Авторизация</a>
+            <a href="./administrator.html" class="footer__nav-item">Администратор</a>
+            <a href="./structure/header.html" class="footer__nav-item">Шапка</a>
+            <a href="./structure/footer.html" class="footer__nav-item">Подвал</a>
+            <a href="./index.html" class="footer__nav-item">index.html</a>
+        </nav>
+        <div class="footer__information">
+            <div class="footer__information-item">
+                <p>Дата последнего обновления</p>
+                <p>12 марта 2025 года 09:32 GMT+5</p>
+            </div>
+            <div class="footer__information-item">
+                <p>Разработано командой разработчиков</p>
+                <p>plteam</p>
+            </div>
+            <div class="footer__information-item">
+                <p>Главный разработчик</p>
+                <p>PROJECT NEK</p>
+            </div>
+            <div class="footer__information-item">
+                <p>Сайт команды</p>
+                <p>www.plteam.com</p>
+            </div>
+        </div>
+        <div class="footer__links">
+            <p>Следите за нами в соцсетях!</p>
+            <div class="footer__links-icons">
+                <a target="_blank" href="https://projectnek.bandcamp.com/"><img src="./media/icons/social/bandcamp.svg" alt="social-icon"></a>
+                <a target="_blank" href="https://github.com/Nek1207"><img src="./media/icons/social/square-github.svg" alt="social-icon"></a>
+                <a target="_blank" href="./in-development.html"><img src="./media/icons/social/square-instagram.svg" alt="social-icon"></a>
+                <a target="_blank" href="https://www.youtube.com/@project_nek.official"><img src="./media/icons/social/square-youtube.svg" alt="social-icon"></a>
+                <a target="_blank" href="https://vk.com/project_nek.official"><img src="./media/icons/social/square_vk.svg" alt="social-icon"></a>
+            </div>
+        </div>
+        <div class="footer__description">
+            <p class="footer__description-item">(c) 2025, PROJECT NEK</p>
+            <p class="footer__description-item">Все Права Защищены</p>
+            <p class="footer__description-item">ИНН: 49039432049032</p>
+            <p class="footer__description-item">КОР: 30167391035802</p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+
+</html>

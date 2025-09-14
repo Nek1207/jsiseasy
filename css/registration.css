@@ -1,0 +1,266 @@
+/* стили страницы "Ргеистрация" */
+
+.bg {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: var(--g);
+    text-align: center;
+    min-height: 100vh;
+    height: auto;
+    border: var(--col-dark-yellow) 20px dashed;
+}
+
+.bg h1 {
+    animation: FormAnimation 1s ease-in-out;
+    /* margin: var(--m); */
+}
+
+.bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(0.5rem);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../media/images/background2.jpeg');
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    width: 40%;
+    min-height: 350px;
+    height: auto;
+    text-align: center;
+    font-weight: 600;
+    color: var(--col-white);
+    gap: var(--g);
+    /* background: rgba(48, 30, 30, 0.1); */
+    border: 0.5em solid var(--col-trans-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    backdrop-filter: blur(3rem);
+    animation: FormAnimation 1s ease-in-out;
+}
+
+
+.registration-form__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.registration-form__item:last-child {
+    margin-top: var(--m);
+    align-items: center;
+}
+
+.registration-form__item input {
+   transition: all .3s; 
+   width: 100%;
+   min-height: 1rem;
+   height: auto;
+   font-size: var(--fz-description);
+   padding: 0.5rem;
+   border-radius: 0.25em;
+   font-family: "Montserrat", sans-serif;
+   cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+   border: inset solid 4px var(--col-dark-yellow); 
+}
+
+
+.registration-form__item input:hover {
+   transition: all .3s; 
+   background: var(--col-light-yellow);
+
+}
+
+.registration-form__item input:focus {
+   transition: all .3s;
+   background: var(--col-light-yellow);
+   font-size: var(--fz-subtitle);
+   cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer; 
+}
+
+.registration-form__item label {
+    font-size: var(--fz-subtitle);
+}
+
+input[type="submit"] {
+   transition: all .3s; 
+   width: 100%;
+   min-height: 2rem;
+   height: auto;
+   font-size: var(--fz-subtitle);
+   font-weight: 800;
+   padding: 0.5rem;
+   border-radius: 0.25em;
+   font-family: "Montserrat", sans-serif;
+   cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+   border: inset solid 4px var(--col-dark-yellow); 
+}
+
+input[type="submit"]:hover {
+    transition: all 3.s;
+    background: var(--col-light-yellow);
+}
+
+input[type="submit"]:active {
+    transition: all 3.s;
+    background: var(--col-dark-yellow);
+}
+
+.bg p {
+    font-weight: 600;
+    text-align: start;
+}
+
+
+
+.agree {
+    display: inline-block;
+    text-wrap: wrap;
+    text-align: start;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.required {
+    color: var(--col-red);
+    text-wrap: none;
+}
+
+.for-agree {
+    color: var(--col-blue);
+    /* text-decoration: underline; */
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+@keyframes FormAnimation {
+    0% { opacity: 0; }
+    /* 25% { opacity: 0.25; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.75; } */
+    100% { opacity: 1; }
+}
+
+.toMain {
+    width: 100%;
+    animation: FormAnimation 1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.toMain-logo {
+    width: 20%;
+    border: .5rem solid var(--col-gray);
+    border-radius: 1rem;
+}
+
+.toMain h2 {
+    font-weight: 800;
+}
+
+.bg h1 {
+    margin: 0;
+}
+
+.authorization-link {
+    transition: all .3s;
+    text-decoration: underline;
+}
+
+.authorization-link:hover {
+    transition: all .3s;
+    color: var(--col-light-yellow);
+}
+
+.authorization-link:active {
+    transition: all .3s;
+    color: var(--col-dark-yellow);
+}
+
+.toReg {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: .5rem;
+}
+
+@media (max-width: 1300px) {
+    .registration-form {
+        width: 80%;
+    }
+    .toMain {
+        width: 100%;
+    }
+    .toMain-logo {
+        width: 25%;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .bg h1 {
+        font-size: var(--fz-subtitle);
+    }
+    .registration-form__item label {
+        font-size: var(--fz-description);
+    }
+    input[type="submit"] {
+        font-size: var(--fz-description);
+    }
+    .registration-form__item input {
+        font-size: var(--fz-h3);
+    }
+    .registration-form__item input:focus {
+        font-size: var(--fz-desctiprion);
+    }
+    .registration-form p {
+        font-size: var(--fz-h3);
+    }
+    .registration-form__item:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .toReg {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+    .toMain-logo {
+        width: 50%;
+    }   
+    
+}
+
