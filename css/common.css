@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 section {
     padding: var(--p);
-    min-height: 500px;
+    /* min-height: 500px; */
     height: auto;
 }
 
@@ -198,7 +198,6 @@ header, main, footer, section {
     /* padding: var(--p-normal); */
 }
 
-/* ТЕСТ ПЛАВНОГО СКРОЛЛА */
 
 body {
     border: none;
@@ -369,7 +368,7 @@ th, td {
 .hidden {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.5s ease-in-out;}
+    transition: all 0.5s ease-in-out; }
 
 .visible {
     opacity: 1;

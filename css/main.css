@@ -363,8 +363,10 @@
     .appdesc__item:last-child img:last-child {
         display: none;
     }
-    .appdesc__item:last-child img:first-child {
+    .appdesc__item:last-child {
         width: 60%;
+    }
+    .appdesc__item:last-child img:first-child {
         rotate: 45deg;
     }
     .whyarewe__cards {
