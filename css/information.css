@@ -62,7 +62,7 @@
     /* box-shadow: 0px 2px 5px var(--col-white); */
 }
 
-.welcome__item span {
+.welcome__item span:first-child {
     font-size: var(--fz-subtitle);
 }
 
@@ -784,7 +784,7 @@
     .welcome__item:last-child .line2 {
         border-bottom: 5px dashed var(--col-white);
     }
-    .welcome__item:last-child h1 span {
+    .welcome__item:last-child h1 span:first-child {
         font-size: var(--fz-description);
     }
     .welcome__item:last-child h1 {

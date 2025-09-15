@@ -132,10 +132,12 @@
 .stats__item-level:first-child img {
     position: absolute;
     z-index: 0;
+    padding-bottom: .25rem;
 }
 
 .stats__item-level:first-child h1 {
     font-size: var(--fz-price);
+    color: var(--col-yellow);
     margin: 0;
     padding: 0;   
 }
@@ -410,6 +412,10 @@ td:nth-child(5) {
     .stats__item:last-child {
         width: 100%;
     }
+
+    .stats__item-total {
+        flex-wrap: wrap;
+    }
         
 }
 
@@ -462,6 +468,13 @@ td:nth-child(5) {
         padding: .25rem;
         font-size: var(--fz-h5);
     }
+    .stats__item-total input,
+    #pass {
+        width: 100%;
+    }
+    .stats__item-total label {
+        width: 100%;
+    }
 
 }
 @media (max-width: 450px) {
@@ -508,6 +521,7 @@ td:nth-child(5) {
     .stats__item-total label {
         font-size: var(--fz-description);
         font-weight: 600;
+        width: 100%;
     }
 
     .stats__item-total ::placeholder {
@@ -515,12 +529,9 @@ td:nth-child(5) {
         font-size: var(--fz-h3);
         font-weight: 600;
     }
-    .stats__item-total input {
-        width: 50%;
-        min-width: 20px;
-    }
-    .stats__item-total label {
-        width: 50%;
+    .stats__item-total input,
+    #pass {
+        width: 100%;
     }
     .stats__item-total:nth-child(2) label {
         width: 100%;

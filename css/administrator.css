@@ -176,7 +176,7 @@
 .change__item-status,
 .change__item-role {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: start;
     align-items: center;
     gap: var(--g);
@@ -186,7 +186,7 @@
 .change__item-id label,
 .change__item-status label,
 .change__item-role label {
-    text-align: end;
+    text-align: start;
     font-size: var(--fz-subtitle);
     font-weight: 600;
     width: 50%;
@@ -278,17 +278,17 @@ input[type="submit"]:active {
     .change__item-id label,
     .change__item-status label,
     .change__item-role label {
-        text-align: end;
+        text-align: start;
         font-size: var(--fz-subtitle);
         font-weight: 600;
-        width: 65%;
+        width: 55%;
     }
     input,
     select,
     input[type="submit"] {
         transition: all .3s; 
         /* min-width: 200px; */
-        width: 35%;
+        width: 45%;
     }
 }
 
@@ -316,7 +316,7 @@ input[type="submit"]:active {
     .change__item-id label,
     .change__item-status label,
     .change__item-role label {
-        text-align: end;
+        text-align: start;
         font-size: var(--fz-subtitle);
         font-weight: 600;
         width: 40%;
@@ -349,6 +349,21 @@ input[type="submit"]:active {
         font-size: var(--fz-h6);
         /* border: .5rem solid var(--col-white); */
     }
+    .change__item-id label,
+    .change__item-status label,
+    .change__item-role label {
+        text-align: start;
+        font-size: var(--fz-subtitle);
+        font-weight: 600;
+        width: 60%;
+    }
+    input,
+    select,
+    input[type="submit"] {
+        transition: all .3s; 
+        /* min-width: 200px; */
+        width: 40%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -364,17 +379,17 @@ input[type="submit"]:active {
     .change__item-id label,
     .change__item-status label,
     .change__item-role label {
-        text-align: end;
+        text-align: start;
         font-size: var(--fz-subtitle);
         font-weight: 600;
-        width: 55%;
+        width: 50%;
     }
     input,
     select,
     input[type="submit"] {
         transition: all .3s; 
         /* min-width: 200px; */
-        width: 45%;
+        width: 50%;
     }
 }
 
@@ -395,17 +410,17 @@ input[type="submit"]:active {
     .change__item-id label,
     .change__item-status label,
     .change__item-role label {
-        text-align: end;
+        text-align: start;
         font-size: var(--fz-description);
         font-weight: 600;
-        width: 40%;
+        width: 50%;
     }
     input,
     select,
     input[type="submit"] {
         transition: all .3s; 
         /* min-width: 200px; */
-        width: 60%;
+        width: 50%;
         font-size: var(--fz-h4);
     }
 }
