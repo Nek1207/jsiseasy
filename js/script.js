@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight - 600) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth - 600)
-        );
+            rect.bottom <= (window.innerHeight * 1.2 || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth * 1.2 || document.documentElement.clientWidth)
+        );2
     }
 
     window.addEventListener('scroll', checkSections);
