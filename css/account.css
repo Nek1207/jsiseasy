@@ -190,7 +190,7 @@
     padding: 0.5rem;
     font-size: var(--fz-description);
     color: var(--col-yellow);   
-    border-radius: 0.5rem;
+    border-radius: var(--brd2);
     font-weight: 600;
     min-width: 200px;
 }
@@ -248,7 +248,7 @@
     height: auto;
     gap: var(--g);
     padding: var(--p);
-    width: 31%;
+    width: 24%;
     /* border-radius: 2rem; */
     /* background: var(--col-gray); */
     background: linear-gradient(var(--col-dark-gray) 0%, var(--col-black) 80%);
@@ -266,7 +266,7 @@
 
 
 .medals__inner-item-image {
-    width: 55%;
+    width: 40%;
 }
 
 .medals__inner-item h2 {

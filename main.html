@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная # JavaScript — это просто! (build202509141)</title>
+    <title>Главная # JavaScript — это просто! (build202509171)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -26,7 +26,7 @@
         </nav>
         <div href="./account.html" class="header__account">
             <a href="#!" class="header__account-item"><img src="./media/icons/navigation/nav_notifications.svg" alt="notifications"></a>
-            <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account_header.svg" alt="account"></a>
+            <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account.svg" alt="account"></a>
             <a href="#!" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></a>
         </div>
     </header>
@@ -41,8 +41,8 @@
                 <p>Добро пожаловать на наш сайт — идеальное место для тех, кто хочет освоить JavaScript <span class="yellow semibold">быстро и увлекательно</span>! Мы создали удобное онлайн-приложение <span class="yellow semibold">специально для вас</span>, будь Вы новичком или опытным разработчиком, желающим углубить знания.</p>
             </div>
             <div class="appdesc__item">
-                <img src="./media/images/content1.svg" alt="content1">
-                <img src="./media/images/content2.svg" alt="content2">
+                <img class="appdesc__item-image" src="./media/images/content1.svg" alt="content1">
+                <img class="appdesc__item-image" src="./media/images/content2.svg" alt="content2">
             </div>
         </section>
 
@@ -53,25 +53,25 @@
             <div class="whyarewe__cards">
                 <div class="smoothscrolling hidden whyarewe__cards-item">
                     <img src="./media/images/content3.svg" alt="content3">
-                    <h2>Простые уроки</h2>
+                    <h2 class="yellow bold">Простые уроки</h2>
                     <p>Начните обучение с нуля и постепенно двигайтесь вперед, осваивая всё новые возможности языка.</p>
                 </div>
 
                 <div class="smoothscrolling hidden whyarewe__cards-item">
                     <img src="./media/images/content4.svg" alt="content4">
-                    <h2>Применение</h2>
+                    <h2 class="yellow bold">Применение</h2>
                     <p>Упражнения и задания помогают закрепить теорию сразу же на практике.</p>
                 </div>
 
                 <div class="smoothscrolling hidden whyarewe__cards-item">
                     <img src="./media/images/content5.svg" alt="content5">
-                    <h2>Интерактивные тесты</h2>
+                    <h2 class="yellow bold">Интерактивные тесты</h2>
                     <p>Проверяйте свои знания регулярно и отслеживайте прогресс.</p>
                 </div>
 
                 <div class="smoothscrolling hidden whyarewe__cards-item">
                     <img src="./media/images/content6.svg" alt="content6">
-                    <h2>Поддержка сообщества</h2>
+                    <h2 class="yellow bold">Поддержка сообщества</h2>
                     <p>Общайтесь с единомышленниками, задавайте вопросы и находите решения вместе.</p>
                 </div>  
             </div>
@@ -94,9 +94,84 @@
 
         <div class="smoothscrolling hidden line"></div>
 
+        <section class="feedback">
+            <h1>Отзывы наших учеников</h1>
+            <div class="feedback__inner">
+                <!-- <div class="slider-container"> -->
+                    <div class="slides">
+                        <div class="feedback__inner-item">
+                            <img class="feedback__inner-item-image" src="./media/images/students/13.png" alt="students1">
+                            <div class="feedback__inner-item-texts">
+                                <div class="feedback-stars">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative_empty.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative_empty.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative_empty.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative_empty.svg" alt="star">
+                                </div>
+                                <h1>Кудряяшев Никита Дмытрыивич</h1>
+                                <h2>с нами с 2018 года</h2>
+                                <div class="line2"></div>
+                                <p>Это просто невероятное отупение! Я в жизни не изучал языка хуже!!!!!</p>
+                            </div>
+                        </div>
+                        <div class="feedback__inner-item">
+                            <img class="feedback__inner-item-image" src="./media/images/students/19.png" alt="students1">
+                            <div class="feedback__inner-item-texts">
+                                <div class="feedback-stars">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                </div>
+                                <h1>Колпакоков Евгений Дмытрыивич</h1>
+                                <h2>с нами с 2022 года</h2>
+                                <div class="line2"></div>
+                                <p>Еда очень вкусная! Очень вежливый персонал и администрация! Дали мне леща в подарок на прощание!</p>
+                            </div>
+                        </div>
+                        <div class="feedback__inner-item">
+                            <img class="feedback__inner-item-image" src="./media/images/students/19.png" alt="students1">
+                            <div class="feedback__inner-item-texts">
+                                <div class="feedback-stars">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                    <img src="./media/icons/content/star_alternative.svg" alt="star">
+                                </div>
+                                <h1>Колпакоков Евгений Дмытрыивич</h1>
+                                <h2>с нами с 2022 года</h2>
+                                <div class="line2"></div>
+                                <p>Еда очень вкусная! Очень вежливый персонал и администрация! Дали мне леща в подарок на прощание!</p>
+                            </div>
+                        </div>
+
+                        <img src="./media/images/students/13.png" alt="">
+                        <img src="./media/images/students/13.png" alt="">
+                        <img src="./media/images/students/13.png" alt="">
+                        <img src="./media/images/students/13.png" alt="">
+                        <img src="./media/images/students/13.png" alt="">
+                    </div>
+
+                    <!-- Кнопки навигации -->
+                    <button id="prevBtn"><</button>
+                    <button id="nextBtn">></button>
+                    
+                    <div id="modal" class="modal">
+                        <span class="close-btn">×</span>
+                        <img id="fullscreen-image" src="" alt="Full Size Image">
+                    </div>
+                <!-- </div> -->
+            </div>
+        </section>
+        
+        <div class="smoothscrolling hidden line3"></div>
+
         <section class="smoothscrolling hidden startnow">
             <h1>Начните свое путешествие в мир JavaScript <span class="yellow">прямо сейчас</span> и создайте <span class="yellow">своё будущее</span> в сфере современной веб-разработки!</h1>
-            <a class="registration-button" href="./registration.html">Зарегистрироваться</a>
+            <a class="registration-button button" href="./registration.html">Зарегистрироваться</a>
             <p>Уже есть аккаунт? <a href="./authorization.html" class="authorization-link">Авторизоваться</a></p>
         </section>
     </main>

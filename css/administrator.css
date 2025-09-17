@@ -167,7 +167,7 @@
     width: 50%;
     min-height: 400px;
     height: auto;
-    border-radius: 2rem;
+    border-radius: var(--brd3);
     border: 10px dashed var(--col-white);
     background: var(--col-dark-gray);
 }
@@ -211,15 +211,13 @@ select {
 }
 
 
-input:hover,
-select:hover {
+input:hover {
    transition: all .3s; 
    background: var(--col-light-yellow);
 
 }
 
-input:focus
-select:focus {
+input:focus {
    transition: all .3s;
    background: var(--col-light-yellow);
    font-size: var(--fz-subtitle);

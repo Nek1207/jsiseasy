@@ -2,6 +2,7 @@
 
 
 .header {
+    transition: all .3s;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -46,7 +47,7 @@
 }
 
 .header__nav-item {
-    transition: all .3s;
+    transition: all .3s !important;
     color: var(--col-black);
     font-weight: 600;
     gap: var(--g);
@@ -54,10 +55,6 @@
 }
 
 
-.header__nav-item:hover {
-    transition: all .3s;
-    color: var(--col-dark-yellow);
-}
 
 .header__account {
     display: flex;
@@ -113,13 +110,14 @@ nav.header__nav > nav {
         
 .header__nav-item:hover {
     transition: all .3s;
-    color: var(--col-light-yellow);
-    /* background-color: rgba(255, 255, 255, 0.1); */
+    font-weight: 800;
+    border-bottom: 5px dashed var(--col-black);
 }
 
 .header__nav-item:active {
     transition: all .3s;
-    color: var(--col-dark-yellow);
+    color: var(--col-black);
+    text-shadow: 0 0 10px var(--col-black);
 }
         
 .burger-icon {
@@ -283,6 +281,20 @@ label.burger-icon:active {
         top: 10px;
         left: 10px;
         z-index: 1000;
+    }
+
+
+    .header__nav-item:hover {
+        transition: all .3s;
+        font-weight: 800;
+        border: none;
+        /* border-bottom: 5px dashed var(--col-white); */
+    }
+
+    .header__nav-item:active {
+        transition: all .3s;
+        color: var(--col-black);
+        text-shadow: 0 0 10px var(--col-white);
     }
 
     #burger-menu-toggle:checked ~ label.burger-icon {

@@ -34,7 +34,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../media/images/background2.jpeg');
+    /* background-image: url('../media/images/background2.jpeg'); */
+    background-color: var(--col-black);
 }
 
 .authorization-form {
@@ -56,7 +57,7 @@
     /* background: rgba(48, 30, 30, 0.1); */
     border: 0.5em solid var(--col-trans-white);
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: var(--brd);
     backdrop-filter: blur(3rem);
     margin-bottom: 4rem;
     animation: FormAnimation 1s ease-in-out;
@@ -184,7 +185,7 @@ input[type="checkbox"] {
 .toMain-logo {
     width: 15%;
     border: .5rem solid var(--col-gray);
-    border-radius: 1rem;
+    border-radius: var(--brd);
 }
 
 .toMain h2 {

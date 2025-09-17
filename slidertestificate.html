@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Image Slider</title>
+    <style>
+        /* Основные настройки */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.25s ease-in-out;
+        }
+
+        .slides img {
+            min-width: 100%;
+            object-fit: cover;
+        }
+
+        #prevBtn,
+        #nextBtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1;
+            color: white;
+            font-size: 2rem;
+            user-select: none;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        #prevBtn {
+            left: 10px;
+        }
+
+        #nextBtn {
+            right: 10px;
+        }
+
+        #prevBtn:hover,
+        #nextBtn:hover {
+            opacity: 1;
+        }
+
+
+        .modal {
+            display: none; /* Начальное состояние: скрыто */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            visibility: hidden; /* Не видим пока */
+            opacity: 0; /* Прозрачный */
+            transition: visibility 0s linear 0.3s, opacity 0.3s cubic-bezier(.2,.8,.2,1); /* Задержка перед изменением visibility */
+        }
+
+        .modal.show-modal {
+            display: block; /* Появляется */
+            visibility: visible; /* Видимо */
+            opacity: 1; /* Непрозрачно */
+        }
+
+        #fullscreen-image {
+            margin: auto;
+            display: block;
+            max-height: 90%;
+            max-width: 90%;
+            transform: scale(0); /* Начинаем с уменьшенного масштаба */
+            transition: transform 0.3s cubic-bezier(.2,.8,.2,1); /* Анимация увеличения */
+        }
+
+        .modal.show-modal #fullscreen-image {
+            transform: scale(1); /* Увеличено до нормального размера */
+        }
+
+    </style>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div class="slider-container">
+        <!-- Контейнер для изображений -->
+        <div class="slides">
+            <img src="./media/images/background1.jpg" alt="Image 1">
+            <img src="./media/images/background2.jpeg" alt="Image 2">
+            <img src="./media/images/bydlo_s_sortirovki_logo.png" alt="Image 3">
+        </div>
+        
+        <!-- Кнопки навигации -->
+        <button id="prevBtn"><</button>
+        <button id="nextBtn">></button>
+        
+        <div id="modal" class="modal">
+            <span class="close-btn">×</span>
+            <img id="fullscreen-image" src="" alt="Full Size Image">
+        </div>
+    </div>
+    
+    <script>
+        // Получаем элементы DOM
+        const slides = document.querySelector('.slides');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        let currentSlideIndex = 0;
+        // Элементы для управления модальным окном
+        const modal = document.getElementById("modal");
+        const fullscreenImg = document.getElementById("fullscreen-image");
+        const closeBtn = document.getElementsByClassName("close-btn")[0];
+
+        // Функция открытия модального окна
+        function openModal(imgSrc) {
+            modal.classList.add("show-modal"); // Показываем модальное окно плавно
+            fullscreenImg.src = imgSrc;
+        }
+
+        // Функция закрытия модального окна
+        function closeModal() {
+            modal.classList.remove("show-modal"); // Удаляем класс, вызывая обратную анимацию
+        }
+
+        // Открытие модального окна при клике на каждое изображение
+        document.querySelectorAll(".slides img").forEach((img) => {
+            img.addEventListener("click", function () {
+                let largeImgUrl = this.dataset.fullsize || this.src;
+                openModal(largeImgUrl);
+            });
+        });
+
+        // Закрытие модального окна при клике на крестик или за пределами изображения
+        closeBtn.addEventListener("click", closeModal);
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        setInterval(() => {
+            // Логика для перехода к следующему слайду
+        }, 3000); // Интервал в миллисекундах (3 секунды)
+
+        // Функция смены картинки
+        function changeSlide() {
+            const slideWidth = slides.children[currentSlideIndex].clientWidth;
+            slides.style.transform = `translateX(-${currentSlideIndex * slideWidth}px)`;
+        }
+
+        
+        // Обработчики кликов на кнопки
+        // Перелистываем вперед
+        nextBtn.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.childElementCount; // Цикличное перелистывание
+            changeSlide();
+        });
+
+        // Перелистываем назад
+        prevBtn.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.childElementCount) % slides.childElementCount; // Цикличное перелистывание
+            changeSlide();
+        });
+
+        function autoNext() {
+            if (currentSlideIndex === slides.childElementCount - 1) { // Проверяем последний слайд
+                currentSlideIndex = 0; // Возвращаемся обратно к первому слайду
+            } else {
+                currentSlideIndex++; // Переходим к следующему слайду
+            }
+            changeSlide(); // Применяем новый индекс слайда
+        }
+
+        // Запускаем автоматическое переключение с интервалом в 3 секунды
+        setInterval(autoNext, 3000); // Интервал 3 секунды
+
+        // Инициализация первого слайда
+        changeSlide();
+    </script>
+</body>
+</html>

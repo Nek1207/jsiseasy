@@ -40,6 +40,7 @@ html::-webkit-scrollbar {
     --col-footer: #0A0A0A;
     
     /* полупрозрачная цветовая гамма */
+    --col-trans: rgba(0, 0, 0, 255);
     --col-trans-white: #DFDFDFAA;
     --col-trans-black: #1F1F1FAA;
     --col-trans-blue: #006FFFAA;
@@ -67,6 +68,11 @@ html::-webkit-scrollbar {
     --g: clamp(8px, 2vw + 4px, 40px);
     --p: clamp(8px, 2vw + 4px, 40px);
     --o: none;
+
+    /* скругление */
+    --brd: 1rem;
+    --brd2: 0.5rem;
+    --brd3: 2rem;
 
 }
 
@@ -148,18 +154,27 @@ section:last-child {
     margin-bottom: 5rem;
 }
 
-button {
+.button {
     transition: all .3s;
+    color: var(--col-black);
+    background: var(--col-yellow) !important;
+    border: 4px solid var(--col-yellow) !important;
     cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
 }
 
-button:hover {
+.button:hover {
     transition: all .3s;
+    color: var(--col-white);
+    background: none !important;
+    border: 4px solid var(--col-white) !important;
     cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer; 
 }
 
-button:active {
+.button:active {
     transition: all .3s;
+    color: var(--col-black);
+    background-color: var(--col-white) !important;
+    border: 4px solid var(--col-white) !important;
     cursor: url("../media/icons/cursors/cursor_diamond_active.png"), default;
 }
 
