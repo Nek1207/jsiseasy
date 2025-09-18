@@ -39,7 +39,7 @@
 
 .welcome__item:first-child img {
     width: 100%;
-    border: 15px dashed var(--col-white);
+    border: var(--brd2) dashed var(--col-white);
 }
 
 .welcome__item:last-child {
@@ -582,6 +582,7 @@
 }
 
 @media (max-width: 1000px) {
+    
     .welcome {
         display: flex;
         flex-direction: column;
@@ -599,8 +600,23 @@
     .welcome__item:last-child {
         width: 100%;
     }
+    .welcome__item:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .welcome__item:last-child h1, 
+    .welcome__item:last-child h2 {
+        text-align: center;
+    }
+    .welcome__item:first-child {
+        width: 40%;
+    }
     .welcome__item:first-child img {
-        border: 10px dashed var(--col-white);
+        width: 100%;
+        border: var(--brd2) dashed var(--col-white);
     }
 
     .history__item-nicknames h1,
@@ -656,9 +672,34 @@
         border-radius: 0;
         border: none;
     }
+
+    .address__inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .address__inner-text,
+    .address__inner iframe {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--g);
+    }
+    .address__inner-text h2,
+    .address__inner-text ul {
+        text-align: center;
+    }
 }
 
 @media (max-width: 800px) {
+    .welcome__item:last-child span:first-child {
+        font-size: var(--fz-subtitle);
+    }
+    .welcome__item:last-child span:last-child {
+        font-size: var(--fz-title);
+    }
     .whydostudy h1 {
         text-align: center;
         font-size: var(--fz-subtitle);
@@ -721,7 +762,7 @@
         margin-bottom: 1.5rem;
     }
     .courses__inner-item {
-        width: 100%;
+        width: 90%;
         min-height: 100px;
         height: auto;
         max-height: auto;
@@ -730,24 +771,7 @@
     .address h1 {
         margin-bottom: 1.5rem;
     }
-    .address__inner {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .address__inner-text,
-    .address__inner iframe {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--g);
-    }
-    .address__inner-text h2,
-    .address__inner-text ul {
-        text-align: center;
-    }
+    
     .whydostudy h1 {
         text-align: center;
         font-size: var(--fz-description);
@@ -774,6 +798,7 @@
         gap: var(--g);
         width: 100%; 
     }
+    .welc
     .welcome__item {
         width: 100%;
     }
@@ -794,8 +819,15 @@
     .welcome__item:last-child h1 {
         font-size: var(--fz-subtitle);
     }
+    .welcome__item:last-child span:first-child {
+        font-size: var(--fz-h3);
+    }
+    .welcome__item:last-child span:last-child {
+        font-size: var(--fz-subtitle);
+    }
     .welcome__item:last-child p {
         font-size: var(--fz-h3);
+        text-align: justify;
     }
 
     .history__item-nicknames h1,
@@ -832,6 +864,8 @@
     }
     .history__item-description-text {
         font-size: var(--fz-h4);
+        padding-left: var(--p);
+        padding-right: var(--p);
     }
     .history__item:nth-child(3) h2 {
         font-size: var(--fz-h3);
@@ -864,9 +898,13 @@
         list-style: disc;
         font-size: var(--fz-h4);        
     }
-    .address h1 {
-        font-size: var(--fz-subtitle);
+    .team__subtitle {
+        padding: var(--p);
     }
+    .address h1 {
+        font-size: var(--fz-description);
+    }
+    .address 
     .address__inner-text h2,
     .address__inner-text ul {
         font-size: var(--fz-description);

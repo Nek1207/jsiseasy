@@ -435,6 +435,11 @@
         align-items: center;
         justify-content: center;
     }
+    .appdesc__item:last-child {
+        width: 80%;
+        z-index: -1;
+        margin-bottom: 5rem;
+    }
     .whyarewe {
         width: 100%;
         padding: var(--p);
@@ -531,10 +536,12 @@
         display: none;
     }
     .appdesc__item:last-child {
-        width: 60%;
+        width: 100%;
+        margin-bottom: 2rem;
     }
     .appdesc__item:last-child img:first-child {
-        rotate: 45deg;
+        width: 90%;
+        rotate: 0deg;
     }
     .whyarewe__cards {
         display: flex;

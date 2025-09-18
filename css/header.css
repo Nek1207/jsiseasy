@@ -320,6 +320,10 @@ label.burger-icon:active {
 }
 
 @media (max-width: 615px) {
+    .header {
+        min-height: 50px;
+        height: auto;
+    }
     .header__title {
         /* display: none; */
         font-size: var(--fz-h4);
@@ -333,6 +337,10 @@ label.burger-icon:active {
     } */
     .header__logo {
         width: 15%;
+    }
+    label.burger-icon {
+        left: 0;
+        top: 0;
     }
 }
 

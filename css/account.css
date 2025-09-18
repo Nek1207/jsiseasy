@@ -75,7 +75,7 @@
 }
 
 .stats .line-vertical {
-    height: 65vh;
+    height: 80vh;
 }
 
 .stats__item-avatar img {
@@ -160,6 +160,7 @@
     font-size: var(--fz-subtitle);
 }
 
+
 .stats__item-counts li {
     line-height: 2;
 }
@@ -167,7 +168,7 @@
 .stats__item:last-child {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
     width: 45%;
     gap: var(--g);
@@ -176,23 +177,40 @@
 
 .stats__item-total {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: start;
-    align-items: center;
-    gap: var(--g);
+    align-items: start;
+    gap: .5rem;
 }
 
+.stats__item-total input:hover,
+.stats__item-total textarea:hover {
+   transition: all .3s; 
+   background: var(--col-light-yellow);
+
+}
+
+.stats__item-total input:focus,
+.stats__item-total textarea:focus {
+   transition: all .3s;
+   background: var(--col-light-yellow);
+   font-size: var(--fz-description);
+   cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer; 
+}
 
 .stats__item-total input,
 .stats__item-total textarea {
-    background: none;
-    border: 0.25rem solid var(--col-yellow);
-    padding: 0.5rem;
+    transition: all .3s; 
+    width: 100%;
+    min-height: 1rem;
+    height: auto;
     font-size: var(--fz-description);
-    color: var(--col-yellow);   
-    border-radius: var(--brd2);
-    font-weight: 600;
-    min-width: 200px;
+    padding: 0.5rem;
+    border-radius: 0.25em;
+    font-family: "Montserrat", sans-serif;
+    cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+    border: inset solid 4px var(--col-dark-yellow); 
+    
 }
 
 .stats__item-total textarea {
@@ -201,12 +219,12 @@
 
 .stats__item-total label {
     color: var(--col-white);
-    font-size: var(--fz-subtitle);
+    font-size: var(--fz-description);
     font-weight: 600;
 }
 
 .stats__item-total ::placeholder {
-    color: var(--col-yellow);
+    color: var(--col-black);
     font-weight: 600;
 }
 
@@ -244,11 +262,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-height: 400px;
+    min-height: 200px;
     height: auto;
-    gap: var(--g);
+    gap: .3rem;
     padding: var(--p);
-    width: 24%;
+    width: 14%;
     /* border-radius: 2rem; */
     /* background: var(--col-gray); */
     background: linear-gradient(var(--col-dark-gray) 0%, var(--col-black) 80%);
@@ -266,11 +284,11 @@
 
 
 .medals__inner-item-image {
-    width: 40%;
+    width: 70%;
 }
 
 .medals__inner-item h2 {
-    font-size: var(--fz-title);
+    font-size: var(--fz-subtitle);
     font-weight: 800;
     text-align: center;
 }
@@ -280,7 +298,7 @@
     color: var(--col-white);
     font-weight: 800;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 
@@ -416,16 +434,27 @@ td:nth-child(5) {
     .stats__item-total {
         flex-wrap: wrap;
     }
-        
+    .medals__inner-item {
+        min-height: 200px;
+        height: auto;
+        width: 18%; 
+        border-top: var(--brd2) dashed var(--col-white);
+    }
+    .medals__inner-item-texts h2 {
+        font-size: var(--fz-description);
+    }
+    .medals__inner-item-texts p {
+        font-size: var(--fz-subtitle);
+    }
+    .medals__inner-item-image {
+        margin-top: .5rem;
+        width: 80%;
+    }  
 }
 
 
 @media (max-width: 1000px) {
-    .medals__inner-item {
-        min-height: 400px;
-        height: auto;
-        width: 45%; 
-    }
+    
     .myorders__inner-table th,
     .myorders__inner-table td {
         flex-wrap: wrap;
@@ -437,11 +466,23 @@ td:nth-child(5) {
 }
 
 @media (max-width: 650px) {
-    
-    .medals__inner-item {
-        min-height: 400px;
+    .medals {
+        min-height: 300px;
         height: auto;
-        width: 80%; 
+    }
+    .medals__inner {
+        width: 100%;
+    }
+    .medals__inner-item {
+        min-height: 100px;
+        height: auto;
+        width: 29%; 
+        padding: .5rem;
+        border-top: var(--brd2) dashed var(--col-white);
+    }
+    .medals__inner-item-image {
+        margin-top: .5rem;
+        width: 60%;
     }
     .account h1 {
         font-size: var(--fz-subtitle);
@@ -478,11 +519,21 @@ td:nth-child(5) {
 
 }
 @media (max-width: 450px) {
-    .medals__inner-item {
+    .medals {
         min-height: 300px;
         height: auto;
-        width: 80%;
-        padding: 2rem; 
+    }
+    .medals__inner-item {
+        min-height: 100px;
+        height: auto;
+        width: 25%;
+        padding: .35rem; 
+    }
+    .medals__inner-item-texts h2 {
+        font-size: var(--fz-h4);
+    }
+    .medals__inner-item-texts p {
+        font-size: var(--fz-description);
     }
     .account h1 {
         font-size: var(--fz-description);

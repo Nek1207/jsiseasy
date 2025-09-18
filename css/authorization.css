@@ -107,7 +107,7 @@
 }
 
 .authorization-form__item label {
-    font-size: var(--fz-subtitle);
+    font-size: var(--fz-description);
 }
 
 input[type="submit"] {
