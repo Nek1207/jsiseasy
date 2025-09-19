@@ -105,12 +105,12 @@
 
 .more:hover {
     color: var(--col-light-yellow);
-    cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer;
+    cursor: pointer;
 }
 
 .more:active {
     color: var(--col-yellow);
-    cursor: url("../media/icons/cursors/cursor_diamond_active.png"), default;
+    cursor: default;
 }
 
 @media (max-width: 1300px) {

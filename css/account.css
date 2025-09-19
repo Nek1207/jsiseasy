@@ -94,7 +94,7 @@
 
 .stats__item-avatar a:hover {
     transition: all .3s;
-    cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer;
+    cursor: pointer;
     color: var(--col-light-yellow);
     /* text-decoration: dashed; */
 }
@@ -103,7 +103,7 @@
     transition: all .3s;
     /* text-decoration: dashed; */
     color: var(--col-dark-yellow);
-    cursor: url("../media/icons/cursors/cursor_diamond_active.png"), default;
+    /* cursor: url("../media/icons/cursors/cursor_diamond_active.png"), default; */
 }
 
 
@@ -190,28 +190,57 @@
 
 }
 
-.stats__item-total input:focus,
-.stats__item-total textarea:focus {
-   transition: all .3s;
-   background: var(--col-light-yellow);
-   font-size: var(--fz-description);
-   cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer; 
-}
 
 .stats__item-total input,
 .stats__item-total textarea {
     transition: all .3s; 
+    user-select: none;
     width: 100%;
     min-height: 1rem;
     height: auto;
     font-size: var(--fz-description);
     padding: 0.5rem;
     border-radius: 0.25em;
+    color: var(--col-black);
+    font-weight: 600;
     font-family: "Montserrat", sans-serif;
-    cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+    cursor: default;
     border: inset solid 4px var(--col-dark-yellow); 
     
 }
+
+
+.editinput {
+   transition: all .3s; 
+   width: 30%;
+   min-height: 2rem;
+   height: auto;
+   font-size: var(--fz-subtitle);
+   font-weight: 800;
+   padding: 0.5rem;
+   border-radius: 0.25em;
+   background: var(--col-yellow);
+   font-family: "Montserrat", sans-serif;
+   cursor: default;
+   border: solid 4px var(--col-yellow); 
+}
+
+.editinput:hover {
+    transition: all 3.s;
+    background: none;
+    color: var(--col-white);
+    border: solid 4px var(--col-white); 
+}
+
+.editinput:active {
+    transition: all 3.s;
+    background: none;
+    color: var(--col-black);
+    background: var(--col-white);
+    border: solid 4px var(--col-white); 
+}
+
+
 
 .stats__item-total textarea {
     width: 100%;
@@ -224,6 +253,7 @@
 }
 
 .stats__item-total ::placeholder {
+    user-select: none;
     color: var(--col-black);
     font-weight: 600;
 }
@@ -325,6 +355,17 @@
     width: 100%;
 }
 
+.myorders__inner-table {
+    border: 10px dashed var(--col-white);
+}
+
+.myorders__inner-table thead {
+    border-bottom: 7px solid var(--col-white);
+}
+
+.myorders__inner-table tr {
+    border-bottom: 5px dashed var(--col-white);
+}
 
 
 th:nth-child(1),
@@ -455,6 +496,18 @@ td:nth-child(5) {
 
 @media (max-width: 1000px) {
     
+    .myorders__inner-table {
+        border: 6px dashed var(--col-white);
+    }
+
+    .myorders__inner-table thead {
+        border-bottom: 4px solid var(--col-white);
+    }
+
+    .myorders__inner-table tr {
+        border-bottom: 3px dashed var(--col-white);
+    }
+
     .myorders__inner-table th,
     .myorders__inner-table td {
         flex-wrap: wrap;
@@ -500,6 +553,18 @@ td:nth-child(5) {
     .myorders {
         min-height: 200px;
     }
+    .myorders__inner-table {
+        border: 3px dashed var(--col-white);
+    }
+
+    .myorders__inner-table thead {
+        border-bottom: 2.5px solid var(--col-white);
+    }
+
+    .myorders__inner-table tr {
+        border-bottom: 2px dashed var(--col-white);
+    }
+
     .myorders__inner-table th,
     .myorders__inner-table td {
         flex-wrap: wrap;

@@ -399,7 +399,7 @@
 }
 
 .address__inner iframe:hover {
-    cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+    cursor: default;
 }
 
 .address__inner-text {

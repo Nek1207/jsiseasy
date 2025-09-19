@@ -151,6 +151,9 @@
 
 
 
+
+
+
 .feedback {
     display: flex;
     flex-direction: column;
@@ -201,12 +204,8 @@
     max-height: 700px;
     border-radius: var(--brd);
     background-color: var(--col-dark-gray);
-
     transition: transform 0.25s ease-in-out;
 }
-
-
-
 
 .feedback__inner-item-image {
     width: 35%;
@@ -300,6 +299,11 @@
 .modal.show-modal #fullscreen-image {
     transform: scale(1); /* Увеличено до нормального размера */
 }
+
+
+
+
+
 
 
 

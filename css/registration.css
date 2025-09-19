@@ -84,7 +84,7 @@
    padding: 0.5rem;
    border-radius: 0.25em;
    font-family: "Montserrat", sans-serif;
-   cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+   cursor: default;
    border: inset solid 4px var(--col-dark-yellow); 
 }
 
@@ -99,7 +99,7 @@
    transition: all .3s;
    background: var(--col-light-yellow);
    font-size: var(--fz-subtitle);
-   cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer; 
+   cursor: pointer; 
 }
 
 .registration-form__item label {
@@ -116,7 +116,7 @@ input[type="submit"] {
    padding: 0.5rem;
    border-radius: 0.25em;
    font-family: "Montserrat", sans-serif;
-   cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+   cursor: default;
    border: inset solid 4px var(--col-dark-yellow); 
 }
 

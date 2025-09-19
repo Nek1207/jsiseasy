@@ -35,6 +35,8 @@
 
     <main class="main account">
         <h1 class="smoothscrolling">Здравствуйте, <span class="yellow">PROJECT NEK<img src="./media/icons/content/star.svg" class="star" alt="star"></span>!</h1>
+        <button class="editinput">Редактировать профиль</button>
+        <div class="edit-input-modal"></div>
         <section class="stats">
             <div class="stats__item">
                 <div class="smoothscrolling hidden stats__item-avatar-n-levels">
@@ -66,23 +68,23 @@
             <div class="stats__item">
                 <div class="smoothscrolling hidden stats__item-total">
                     <label for="login">Логин</label>
-                    <input id="login" name="login" type="text" placeholder="PROJECT_NEK">
+                    <input readonly="true" id="login" name="login" type="text" placeholder="PROJECT_NEK">
                 </div>
                 <div class="smoothscrolling hidden stats__item-total">
                     <label for="description">Описание профиля</label>
-                    <textarea cols="3" rows="5" placeholder="Напишите что-нибудь о себе..." name="description" id="description"></textarea>
+                    <textarea readonly="true" cols="3" rows="5" placeholder="Напишите что-нибудь о себе..." name="description" id="description"></textarea>
                 </div>
                 <div class="smoothscrolling hidden stats__item-total">
                     <label for="email">Электронная почта</label>
-                    <input id="email" name="email" type="email" placeholder="Nek1207@yandex.ru">
+                    <input readonly="true" id="email" name="email" type="email" placeholder="Nek1207@yandex.ru">
                 </div>
                 <div class="smoothscrolling hidden stats__item-total">
                     <label for="phone">Номер телефона</label>
-                    <input id="phone" name="phone" type="tel" placeholder="+7 (953) 049-14-08">
+                    <input readonly="true" id="phone" name="phone" type="tel" placeholder="+7 (953) 049-14-08">
                 </div>
                 <div class="smoothscrolling hidden stats__item-total">
                     <label id="pass" for="pass">Пароль</label>
-                    <input id="pass" name="pass" type="password" placeholder="**********">
+                    <input readonly="true" id="pass" name="pass" type="password" placeholder="**********">
                 </div>
             </div>
         </section>

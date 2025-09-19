@@ -159,7 +159,7 @@ section:last-child {
     color: var(--col-black);
     background: var(--col-yellow) !important;
     border: 4px solid var(--col-yellow) !important;
-    cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+    cursor: default;
 }
 
 .button:hover {
@@ -167,7 +167,7 @@ section:last-child {
     color: var(--col-white);
     background: none !important;
     border: 4px solid var(--col-white) !important;
-    cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer; 
+    cursor: pointer; 
 }
 
 .button:active {
@@ -175,19 +175,19 @@ section:last-child {
     color: var(--col-black);
     background-color: var(--col-white) !important;
     border: 4px solid var(--col-white) !important;
-    cursor: url("../media/icons/cursors/cursor_diamond_active.png"), default;
+    cursor: default;
 }
 
 a {
     transition: all .3s;
     color: var(--col-white);
     text-decoration: none;
-    cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+    cursor: default;
 }
 
 a:hover {
     transition: all .3s;
-    cursor: url("../media/icons/cursors/cursor_diamond_pointer.png"), pointer;
+    cursor: pointer;
     /* text-decoration: dashed; */
 }
 
@@ -195,7 +195,7 @@ a:active {
     transition: all .3s;
     /* text-decoration: dashed; */
     color: var(--col-white);
-    cursor: url("../media/icons/cursors/cursor_diamond_active.png"), default;
+    cursor: default;
 }
 
 ul, li, ol {
@@ -224,7 +224,7 @@ body {
     min-height: 800px;
     height: auto;
     font-family: "Montserrat", sans-serif;
-    cursor: url("../media/icons/cursors/cursor_diamond_default.png"), default;
+    cursor: default;
 }
 
 
@@ -333,7 +333,7 @@ thead
     flex-direction: row;
     justify-content: space-between;
     align-items: center; */
-    border-bottom: 5px solid var(--col-white);
+    border-bottom: 3.5px solid var(--col-white);
     text-align: start;
     width: 100%;
     padding: var(--p);
@@ -360,7 +360,7 @@ tbody {
 }
 
 tr {
-    border-bottom: 5px dashed var(--col-white);
+    border-bottom: 2.5px dashed var(--col-white);
 }
 
 tr:last-child {
@@ -383,7 +383,8 @@ th, td {
 .hidden {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.5s ease-in-out;
+}
 
 .visible {
     opacity: 1;
