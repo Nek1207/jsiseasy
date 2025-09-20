@@ -1,0 +1,135 @@
+{
+    "users": {
+        "id": 1,
+        "login": "PROJECT NEK",
+        "email": "Nek1207@yandex.ru",
+        "phone": "+79530491408",
+        "pass": "prjctnkprjctnk"
+    },
+    "roles": {
+        "1": "Standart",
+        "2": "VIP",
+        "3": "Administrator",
+        "4": "Owner"
+    },
+    "orders": {
+        "id": 1,
+        "name": "JSknower1",
+        "login": "PROJECT NEK",
+        "email": "Nek1207@yandex.ru",
+        "phone": "+79530491408",
+        "date": "2025-09-21",
+        "cost": 1990,
+        "status": "In process"
+    },
+    "statuses": {
+        "1": "Rejected",
+        "2": "In process",
+        "3": "Success"
+    },
+    "information": {
+        "developersTeam": "plteam",
+        "developers": {
+            "1": {
+                "name": "qckdth",
+                "country": "Germany",
+                "post": "JS developer",
+                "totalExperience": 7,
+                "teachingExperience": 3,
+                "projectsDeveloped": 9
+            },
+            "2": {
+                "name": "d0t",
+                "country": "Sweden",
+                "post": "JS developer",
+                "totalExperience": 9,
+                "teachingExperience": 6,
+                "projectsDeveloped": 5
+            },
+            "3": {
+                "name": "shar",
+                "country": "Russian Federation",
+                "post": "JS developer",
+                "totalExperience": 10,
+                "teachingExperience": 9,
+                "projectsDeveloped": 5
+            },
+            "4": {
+                "name": "MalinovayaAgonya",
+                "country": "Russian Federation",
+                "post": "JS developer",
+                "totalExperience": 4,
+                "teachingExperience": 4,
+                "projectsDeveloped": 2
+            } 
+        },
+        "teamLeader": {
+            "name": "PROJECT NEK",
+            "country": "Russian Federation",
+            "post": "Team leader",
+            "totalExperience": 19,
+            "teachingExperience": 5,
+            "projectsDeveloped": 11
+        },
+        "website": "www.plteam.com",
+        "inn": 49039432049032,
+        "kor": 30167391035802,
+        "address": "Russian Federation, Yekaterinburg City, Kosmonatov avenue, building number 50",
+        "workSchelude": "7am-6pm monday-friday, 10am-15am satturday-sunday",
+        "phoneNumber": "+7 (953) 049-14-08"
+    },
+    "courses": {
+        "1": {
+            "id": 1,
+            "title": "JSknower1",
+            "subtitle": "Suitable for those who have never tried programming before",
+            "cost": 1990,
+            "lessonsQuantity": 30,
+            "tasksQuantity": 300,
+            "hoursQuantity": 90,
+            "releaseDate": "2020-12-11"
+        },
+        "2": {
+            "id": 2,
+            "title": "JSknower2",
+            "subtitle": "Suitable for those who know basic construction techniques",
+            "cost": 3490,
+            "lessonsQuantity": 190,
+            "tasksQuantity": 900,
+            "hoursQuantity": 250,
+            "releaseDate": "2020-10-30"
+        },
+        "3": {
+            "id": 3,
+            "title": "JSknower3",
+            "subtitle": "Suitable for those who want to immerse themselves in learning",
+            "cost": 4990,
+            "lessonsQuantity": 100,
+            "tasksQuantity": 800,
+            "hoursQuantity": 160,
+            "releaseDate": "2023-12-25"
+        },
+        "4": {
+            "id": 4,
+            "title": "JSknower4",
+            "subtitle": "Suitable for those who are hardened by the difficulties of this field",
+            "cost": 6990,
+            "lessonsQuantity": 80,
+            "tasksQuantity": 630,
+            "hoursQuantity": 120,
+            "releaseDate": "2025-03-25"
+        },
+        "5": {
+            "id": 5,
+            "title": "JSknower5",
+            "subtitle": "CAUTION! This is hardcore, you will need to consult a psychologist",
+            "cost": 9990,
+            "lessonsQuantity": 50,
+            "tasksQuantity": 500,
+            "hoursQuantity": 100,
+            "releaseDate": "2025-12-25"
+        }
+    }
+    
+
+}

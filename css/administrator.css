@@ -192,7 +192,36 @@
     width: 50%;
 }
 
+.changeinput {
+    transition: all .3s; 
+    width: 100%;
+    min-width: 100px;
+    min-height: 2rem;
+    height: auto;
+    font-size: var(--fz-subtitle);
+    font-weight: 800;
+    padding: 0.5rem;
+    border-radius: 0.25em;
+    background: var(--col-yellow);
+    font-family: "Montserrat", sans-serif;
+    cursor: default;
+    border: solid 4px var(--col-yellow); 
+    margin-top: var(--m);
+}
 
+.changeinput:hover {
+    transition: all .3s;
+    background: none;
+    color: var(--col-white);
+    border: solid 4px var(--col-white); 
+}
+
+.changeinput:active {
+    transition: all .3s;
+    background: var(--col-white);
+    color: var(--col-black);
+    border: solid 4px var(--col-white); 
+}
 
 input,
 select {
