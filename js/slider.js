@@ -1,128 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Image Slider</title>
-    <style>
-        /* Основные настройки */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+// СЛАЙДЕР
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fafafa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+document.addEventListener("DOMContentLoaded", () => {
 
-        .slider-container {
-            position: relative;
-            width: 80%;
-            max-width: 800px;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.25s ease-in-out;
-        }
-
-        .slides img {
-            min-width: 100%;
-            object-fit: cover;
-        }
-
-        #prevBtn,
-        #nextBtn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            z-index: 1;
-            color: white;
-            font-size: 2rem;
-            user-select: none;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        #prevBtn {
-            left: 10px;
-        }
-
-        #nextBtn {
-            right: 10px;
-        }
-
-        #prevBtn:hover,
-        #nextBtn:hover {
-            opacity: 1;
-        }
-
-
-        .modal {
-            display: none; /* Начальное состояние: скрыто */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            visibility: hidden; /* Не видим пока */
-            opacity: 0; /* Прозрачный */
-            transition: visibility 0s linear 0.3s, opacity 0.3s cubic-bezier(.2,.8,.2,1); /* Задержка перед изменением visibility */
-        }
-
-        .modal.show-modal {
-            display: block; /* Появляется */
-            visibility: visible; /* Видимо */
-            opacity: 1; /* Непрозрачно */
-        }
-
-        #fullscreen-image {
-            margin: auto;
-            display: block;
-            max-height: 90%;
-            max-width: 90%;
-            transform: scale(0); /* Начинаем с уменьшенного масштаба */
-            transition: transform 0.3s cubic-bezier(.2,.8,.2,1); /* Анимация увеличения */
-        }
-
-        .modal.show-modal #fullscreen-image {
-            transform: scale(1); /* Увеличено до нормального размера */
-        }
-
-    </style>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-</head>
-<body>
-    <div class="slider-container">
-        <!-- Контейнер для изображений -->
-        <div class="slides">
-            <img src="./media/images/background1.jpg" alt="Image 1">
-            <img src="./media/images/background2.jpeg" alt="Image 2">
-            <img src="./media/images/bydlo_s_sortirovki_logo.png" alt="Image 3">
-        </div>
-        
-        <!-- Кнопки навигации -->
-        <button id="prevBtn"><</button>
-        <button id="nextBtn">></button>
-        
-        <div id="modal" class="modal">
-            <span class="close-btn">×</span>
-            <img id="fullscreen-image" src="" alt="Full Size Image">
-        </div>
-    </div>
-    
-    <script>
         // Получаем элементы DOM
         const slides = document.querySelector('.slides');
         const prevBtn = document.getElementById('prevBtn');
@@ -199,6 +78,6 @@
 
         // Инициализация первого слайда
         changeSlide();
-    </script>
-</body>
-</html>
+
+
+});

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Модальное окно</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-sefir;
+        }
+        .modal {
+            display: block;
+            position: fixed;
+            bottom: 0; /* Изначально сдвигаем окно вниз */
+            transition: all 1s ease-in-out; /* Эффект плавного перемещения */
+            width: 100%; /* Окно растянуто на всю ширину экрана */
+            max-width: 600px; /* Ограничиваем максимальную ширину */
+            margin: 0 auto; /* Центрируем горизонтально */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Немного тени для красивого вида */
+            background-color: white;
+            transform: translateY(100%);
+            padding: 20px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        .modal.show {
+            transform: all 1s ease-in-out;
+            display: block;
+            position: absolute;
+            max-width: 600px; /* Ограничиваем максимальную ширину */
+            margin: 0 auto; /* Центрируем горизонтально */
+            width: 100vw;
+            height: 70%;
+            z-index: 1000;
+            transform: translateY(-20%);
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close:focus .modal.show {
+            transition: all 1s ease-in-out;
+            transform: translateY(100%);
+        }
+    </style>
+</head>
+<body>
+
+<button id="openModal">Открыть модальное окно</button>
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">×</span>
+        <h2>Заголовок модального окна</h2>
+        <p>Это содержимое модального окна.</p>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('myModal');
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    // Функция открытия модального окна
+    openBtn.onclick = function () {
+        modal.classList.add('show'); // Добавляем класс show
+    };
+
+    // Функция закрытия модального окна
+    closeBtn.onclick = function () {
+        modal.classList.remove('show'); // Удаляем класс show
+    };
+
+    // Закрытие окна при клике вне модального окна
+    window.onclick = function (event) {
+        if (event.target === modal && !modal.contains(event.target)) {
+            modal.classList.remove('show');
+        }
+    };
+
+    // Закрытие окна при нажатии ESC
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            modal.classList.remove('show');
+        }
+    });
+</script>
+
+</body>
+</html>

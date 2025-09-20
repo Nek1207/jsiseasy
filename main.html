@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная # JavaScript — это просто! (build202509181)</title>
+    <title>Главная # JavaScript — это просто! (build202509201)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/main.css">
-    
     <link rel="icon" type="image/x-icon" href="./media/icons/logo.svg">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/smoothscrolling.js"></script>
+    <script src="./js/swiper-slider.js"></script>
 </head>
 <body>
 
@@ -46,7 +48,7 @@
             </div>
         </section>
 
-        <div class="smoothscrolling hidden line"></div>
+        <div class="smoothscrolling hidden line3"></div>
 
         <section class="whyarewe">
             <h1 class="smoothscrolling hidden">Почему именно мы?</h1>
@@ -92,13 +94,68 @@
         </section>
 
 
-        <div class="smoothscrolling hidden line"></div>
+        <div class="smoothscrolling hidden line3"></div>
 
-        <!-- <section class="feedback">
-            <h1>Отзывы наших учеников</h1>
-            <div class="feedback__inner">
+        <!-- <section class="worksofstudents">
+            <h1 class="smoothscrolling hidden">Работы наших учеников</h1>
+            <div class="smoothscrolling hidden worksofstudents__inner">
                 <div class="slider-container">
                     <div class="slides">
+                        <img src="./media/images/slidercontent1.jpg" alt="slidercontent1">
+                        <img src="./media/images/slidercontent2.jpg" alt="slidercontent2">
+                        <img src="./media/images/slidercontent3.jpg" alt="slidercontent3">
+                        <img src="./media/images/slidercontent4.jpg" alt="slidercontent4">
+                        <img src="./media/images/slidercontent5.jpg" alt="slidercontent5">
+                        <img src="./media/images/slidercontent6.jpg" alt="slidercontent6">
+                        <img src="./media/images/slidercontent7.jpg" alt="slidercontent7">
+                        <img src="./media/images/slidercontent8.jpg" alt="slidercontent8">
+                    </div>
+                    <button id="prevBtn"><</button>
+                    <button id="nextBtn">></button>
+                    <div id="modal" class="modal">
+                        <span class="close-btn">×</span>
+                        <img id="fullscreen-image" src="" alt="Full Size Image">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="worksofstudents">
+                
+            <h1 class="smoothscrolling hidden">Работы наших учеников</h1>
+                <div class="smoothscrolling hidden slider-container">
+                    <!-- Контейнер для изображений -->
+                    <div class="slides">
+                        <img src="./media/images/slidercontent1.jpg" alt="slidercontent1">
+                        <img src="./media/images/slidercontent2.jpg" alt="slidercontent2">
+                        <img src="./media/images/slidercontent3.jpg" alt="slidercontent3">
+                        <img src="./media/images/slidercontent4.jpg" alt="slidercontent4">
+                        <img src="./media/images/slidercontent5.jpg" alt="slidercontent5">
+                        <img src="./media/images/slidercontent6.jpg" alt="slidercontent6">
+                        <img src="./media/images/slidercontent7.jpg" alt="slidercontent7">
+                        <img src="./media/images/slidercontent8.jpg" alt="slidercontent8">
+                    </div>
+                    
+                    <!-- Кнопки навигации -->
+                    <button id="prevBtn"><</button>
+                    <button id="nextBtn">></button>
+                    
+                    <div id="modal" class="modal">
+                        <span class="close-btn">×</span>
+                        <img id="fullscreen-image" src="" alt="Full Size Image">
+                    </div>
+                </div>
+
+        </section>
+
+
+        <div class="smoothscrolling hidden line3"></div>
+
+        <section class="feedback">
+            <h1 class="smoothscrolling hidden">Отзывы наших учеников</h1>
+            <div class="smoothscrolling hidden feedback_inner">
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div class="feedback__inner-item">
                             <img class="feedback__inner-item-image" src="./media/images/students/13.png" alt="students1">
                             <div class="feedback__inner-item-texts">
@@ -115,6 +172,8 @@
                                 <p>Это просто невероятное отупение! Я в жизни не изучал языка хуже!!!!!</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="feedback__inner-item">
                             <img class="feedback__inner-item-image" src="./media/images/students/19.png" alt="students1">
                             <div class="feedback__inner-item-texts">
@@ -131,6 +190,8 @@
                                 <p>Еда очень вкусная! Очень вежливый персонал и администрация! Дали мне леща в подарок на прощание!</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="swiper-slide">
                         <div class="feedback__inner-item">
                             <img class="feedback__inner-item-image" src="./media/images/students/19.png" alt="students1">
                             <div class="feedback__inner-item-texts">
@@ -147,25 +208,13 @@
                                 <p>Еда очень вкусная! Очень вежливый персонал и администрация! Дали мне леща в подарок на прощание!</p>
                             </div>
                         </div>
-
-                        <img src="./media/images/students/13.png" alt="">
-                        <img src="./media/images/students/13.png" alt="">
-                        <img src="./media/images/students/13.png" alt="">
-                        <img src="./media/images/students/13.png" alt="">
-                        <img src="./media/images/students/13.png" alt="">
                     </div>
-
-                    <button id="prevBtn"><</button>
-                    <button id="nextBtn">></button>
-                    
-                    <div id="modal" class="modal">
-                        <span class="close-btn">×</span>
-                        <img id="fullscreen-image" src="" alt="Full Size Image">
                     </div>
+                </div>
             </div>
-        </section> -->
+        </section>
         
-        <!-- <div class="smoothscrolling hidden line3"></div> -->
+        <div class="smoothscrolling hidden line3"></div>
 
         <section class="smoothscrolling hidden startnow">
             <h1>Начните свое путешествие в мир JavaScript <span class="yellow">прямо сейчас</span> и создайте <span class="yellow">своё будущее</span> в сфере современной веб-разработки!</h1>
@@ -229,8 +278,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
 
 </body>
 

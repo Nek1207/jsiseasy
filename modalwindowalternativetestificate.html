@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всплывающая форма (с валидацией и Placeholder)</title>
+    <style>
+        /* Общие стили для тела страницы */
+
+
+        /* Стили для всплывающего окна (оверлея) */
+        .popup-overlay {
+            display: none; /* Скрыто по умолчанию */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Чтобы всплывающее окно было поверх всего */
+        }
+
+        /* Стили для самой формы внутри всплывающего окна */
+        .popup-form {
+            transition: all 1s ease-in-out;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            box-sizing: border-box; /* Учитываем padding в ширине */
+        }
+
+        .popup-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Стили для кнопки закрытия "X" */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .close-btn:hover {
+            color: #555;
+        }
+
+        /* Стили для групп полей формы */
+
+    </style>
+</head>
+<body>
+
+
+<button id="openFormBtn1">Оставить заявку</button>
+
+<div id="popupOverlay" class="popup-overlay">
+    <div id="popupForm" class="popup-form">
+        <span class="close-btn" id="closeFormBtn">&times;</span>
+        <h2 >АОУТОВ</h2>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupForm = document.getElementById('popupForm');
+        const closeFormBtn = document.getElementById('closeFormBtn');
+        const openFormButtons = document.getElementById('openFormBtn1');
+        // --- Функции для управления всплывающим окном ---
+        function openPopup() {
+            popupOverlay.style.display = 'flex';
+            popupForm.classList.add('active');
+            // Очищаем сообщения об ошибках при открытии формы
+        }
+
+        function closePopup() {
+            popupOverlay.style.display = 'none';
+            popupForm.classList.remove('active');
+        }
+
+        // --- Функции для валидации ---
+
+
+
+        // --- Обработчики событий ---
+            openFormButtons.addEventListener('click', () => {
+                openPopup();
+            });
+
+        closeFormBtn.addEventListener('click', closePopup);
+
+        popupOverlay.addEventListener('click', (event) => {
+            if (event.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

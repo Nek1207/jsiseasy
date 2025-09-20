@@ -11,10 +11,166 @@
 }
 
 .account h1 {
+    margin-top: 9rem;
     color: var(--col-white);
     text-align: center;
 }
 
+/* Стили для всплывающего окна (оверлея) */
+.popup-overlay {
+    /* transition: all 1s ease-in-out; */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Чтобы всплывающее окно было поверх всего */
+}
+
+/* Стили для самой формы внутри всплывающего окна */
+.popup-form {
+    /* transition: all 1s ease-in-out; */
+    background-color: var(--col-light-gray);
+    /* padding: 1rem; */
+    border-radius: var(--brd);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 50vw;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--g);
+}
+        
+.line6 {
+   width: 100%;
+    /* position: relative; */
+    padding: 0;
+    margin: 0;
+    border-top: var(--brd2) solid var(--col-black);
+}
+
+.popup-form h2 {
+    font-weight: 800;
+    font-size: var(--fz-subtitle);
+    text-align: center;
+    margin-top: 1rem;
+    /* margin-bottom: var(--m); */
+    padding-top: .25rem;
+    color: var(--col-black);
+}
+/* Стили для кнопки закрытия "X" */
+.close-btn {
+    transition: all .3s;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    margin-right: .25rem;
+    font-size: var(--fz-price);
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--col-black);
+}
+
+.close-btn:hover {
+    transition: all .3s;
+    color: var(--col-yellow);
+}
+
+.popup-form__inputs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: .75rem;
+    padding: var(--p);
+    height: 100% !important;
+    width: 100%;
+    height: auto;
+}
+
+.popup-form__inputs-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+}
+
+
+.popup-form__inputs-item input {
+   transition: all .3s; 
+   width: 100%;
+   min-height: 1rem;
+   height: auto;
+   font-size: var(--fz-description);
+   padding: 0.5rem;
+   border-radius: 0.25em;
+   font-family: "Montserrat", sans-serif;
+   cursor: default;
+   border: inset solid 4px var(--col-dark-yellow); 
+}
+
+
+.popup-form__inputs-item input:hover {
+   transition: all .3s; 
+   background: var(--col-light-yellow);
+
+}
+
+.popup-form__inputs-item input:focus {
+   transition: all .3s;
+   background: var(--col-light-yellow);
+   font-size: var(--fz-subtitle);
+   cursor: pointer; 
+}
+
+.popup-form__inputs-item label {
+    font-weight: 600;
+    color: var(--col-black);
+    margin-bottom: .5rem;
+    font-size: var(--fz-description);
+}
+
+
+.changeinput {
+    transition: all .3s !important; 
+    width: 100%;
+    min-width: 100px;
+    min-height: 2rem;
+    height: auto;
+    font-size: var(--fz-subtitle);
+    font-weight: 800;
+    padding: 0.5rem;
+    border-radius: 0.25em;
+    background: var(--col-yellow);
+    font-family: "Montserrat", sans-serif;
+    cursor: default;
+    border: solid 4px var(--col-yellow); 
+    margin-top: var(--m);
+}
+
+.changeinput:hover {
+    transition: all .3s !important;
+    background: none;
+    color: var(--col-black);
+    border: solid 4px var(--col-black); 
+}
+
+.changeinput:active {
+    transition: all .3s !important;
+    background: none;
+    color: var(--col-black);
+    background: var(--col-black);
+    border: solid 4px var(--col-black); 
+}
 
 .star {
     margin: 0 .75rem 0 .25rem;
@@ -211,18 +367,19 @@
 
 
 .editinput {
-   transition: all .3s; 
-   width: 30%;
-   min-height: 2rem;
-   height: auto;
-   font-size: var(--fz-subtitle);
-   font-weight: 800;
-   padding: 0.5rem;
-   border-radius: 0.25em;
-   background: var(--col-yellow);
-   font-family: "Montserrat", sans-serif;
-   cursor: default;
-   border: solid 4px var(--col-yellow); 
+    transition: all .3s; 
+    width: 30%;
+    min-height: 2rem;
+    height: auto;
+    font-size: var(--fz-subtitle);
+    font-weight: 800;
+    padding: 0.5rem;
+    border-radius: 0.25em;
+    background: var(--col-yellow);
+    font-family: "Montserrat", sans-serif;
+    cursor: default;
+    border: solid 4px var(--col-yellow); 
+    margin-top: var(--m);
 }
 
 .editinput:hover {
@@ -332,7 +489,16 @@
 }
 
 
-
+.myorders__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--g);
+    padding: var(--p);
+    width: 100%;
+}
 
 .myorders {
     min-height: 600px;
@@ -344,16 +510,7 @@
     gap: var(--g);
 }
 
-.myorders__inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--g);
-    padding: var(--p);
-    width: 100%;
-}
+
 
 .myorders__inner-table {
     border: 10px dashed var(--col-white);
@@ -395,7 +552,13 @@ td:nth-child(5) {
 
 
     
-    
+@media (max-width: 1300px) {
+    .editinput {
+        width: 40%;
+        min-height: 2rem;
+        font-size: var(--fz-subtitle);
+    }
+}    
 
 @media (max-width: 1100px) {
     .stats {
@@ -516,9 +679,17 @@ td:nth-child(5) {
         padding: var(--p);
         font-size: var(--fz-h3);
     }
+    .editinput {
+        width: 60%;
+        font-size: var(--fz-subtitle);
+    }
 }
 
 @media (max-width: 650px) {
+    .editinput {
+        width: 60%;
+        font-size: var(--fz-description);
+    }
     .medals {
         min-height: 300px;
         height: auto;
@@ -550,6 +721,11 @@ td:nth-child(5) {
 
 
 @media (max-width: 550px) {
+    .editinput { 
+        width: 60%;
+        min-height: .5rem;
+        font-size: var(--fz-h4);
+    }
     .myorders {
         min-height: 200px;
     }
