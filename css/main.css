@@ -1,3 +1,4 @@
+
 /* стили страницы "Главная" */
 
 .main {
@@ -168,20 +169,29 @@
     gap: var(--g);
 }
 
+.feedback__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 .swiper {
     /* margin: 100px auto;  */
-    width: 50%;
+    width: 50vw;
+    min-height: 200px;
     height: auto;
 }
+
 
 .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    font-weight: bold;
-    color: #fff;
+    font-weight: 800;
+    color: var(--col-white);
 }
 
 /* .slider-container {
@@ -530,6 +540,11 @@
         width: 80%;
         z-index: -1;
         margin-bottom: 5rem;
+    }
+    .appdesc__item:last-child .appdesc__item-image:first-child,
+    .appdesc__item:last-child .appdesc__item-image:last-child {
+        border: var(--brd2) dashed var(--col-white);
+        border-radius: var(--brd2);
     }
     .whyarewe {
         width: 100%;

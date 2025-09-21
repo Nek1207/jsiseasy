@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (isInViewport(section)) {
                     section.classList.remove('hidden');
                     section.classList.add('visible');
+                    section.classList.remove('hidden-left');
+                    section.classList.add('visible-left');
+                    section.classList.remove('hidden-right');
+                    section.classList.add('visible-right');
+                    section.classList.remove('hidden-left-special');
+                    section.classList.add('visible-left-special');
+                    section.classList.remove('hidden-right-special');
+                    section.classList.add('visible-right-special');
                 }
             });
         }

@@ -27,6 +27,23 @@
         "2": "In process",
         "3": "Success"
     },
+    "medals": {
+        "1": "Beginner",
+        "2": "Intermediate",
+        "3": "Pro I",
+        "4": "Pro II",
+        "5": "Pro III",
+        "6": "Master degree",
+        "7": "Veteran",
+        "8": "Commentator",
+        "9": "VIP",
+        "10": "Record holder",
+        "11": "Teacher",
+        "12": "Explainer",
+        "13": "Debugger",
+        "14": "E.A.G.L.E.",
+        "15": "Quantum Computer"
+    },
     "information": {
         "developersTeam": "plteam",
         "developers": {

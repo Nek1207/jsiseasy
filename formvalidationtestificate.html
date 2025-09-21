@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всплывающая форма (с валидацией и Placeholder)</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Общие стили для тела страницы */
+        body {
+        }
+        /* Стили для всплывающего окна (оверлея) */
+        .popup-overlay {
+            display: none; /* Скрыто по умолчанию */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Чтобы всплывающее окно было поверх всего */
+        }
+
+        /* Стили для самой формы внутри всплывающего окна */
+        .popup-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            box-sizing: border-box; /* Учитываем padding в ширине */
+        }
+
+        .popup-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Стили для кнопки закрытия "X" */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .close-btn:hover {
+            color: #555;
+        }
+
+        /* Стили для групп полей формы */
+        .form-group {
+            margin-bottom: 15px;
+            position: relative; /* Для размещения сообщений об ошибках */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Стили для полей ввода и текстовой области */
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical; /* Разрешаем вертикальное изменение размера */
+        }
+
+        /* Стили для сообщений об ошибках */
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block; /* Отображаем как блок */
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #007bff; /* Подсветка при фокусе */
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+
+        /* Стили для кнопки отправки формы */
+        .popup-form button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup-form button[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Пример всплывающей формы</h1>
+
+<button id="openFormBtn1" data-form-title="Заявка на консультацию">Оставить заявку</button>
+<button id="openFormBtn2" data-form-title="Обратная связь">Связаться с нами</button>
+
+
+
+<div id="popupOverlay" class="popup-overlay">
+    <div id="popupForm" class="popup-form">
+        <span class="close-btn" id="closeFormBtn">&times;</span>
+        <h2 id="formTitle"></h2>
+        <form id="myForm" novalidate> <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+            <span id="nameError" class="error-message"></span>
+        </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                <span id="emailError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX" pattern="^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$">
+                <span id="phoneError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="comment">Комментарий:</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Ваши вопросы или пожелания (не менее 10 символов)"></textarea>
+                <span id="commentError" class="error-message"></span>
+            </div>
+            <button type="submit" id="submitBtn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupForm = document.getElementById('popupForm');
+        const closeFormBtn = document.getElementById('closeFormBtn');
+        const formTitle = document.getElementById('formTitle');
+        const myForm = document.getElementById('myForm');
+
+        // Поля ввода
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const commentInput = document.getElementById('comment');
+
+        // Элементы для сообщений об ошибках
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+        const commentError = document.getElementById('commentError');
+
+        const openFormButtons = document.querySelectorAll('[id^="openFormBtn"]');
+
+        // --- Функции для управления всплывающим окном ---
+        function openPopup(title) {
+            formTitle.textContent = title;
+            popupOverlay.style.display = 'flex';
+            popupForm.classList.add('active');
+            // Очищаем сообщения об ошибках при открытии формы
+            clearErrorMessages();
+        }
+
+        function closePopup() {
+            popupOverlay.style.display = 'none';
+            popupForm.classList.remove('active');
+            myForm.reset(); // Очищаем поля формы
+            clearErrorMessages(); // Очищаем сообщения об ошибках
+        }
+
+        // --- Функции для валидации ---
+        function showError(element, message) {
+            element.textContent = message;
+        }
+
+        function clearError(element) {
+            element.textContent = '';
+        }
+
+        function clearErrorMessages() {
+            clearError(nameError);
+            clearError(emailError);
+            clearError(phoneError);
+            clearError(commentError);
+        }
+
+        function validateForm() {
+            let isValid = true;
+
+            // Валидация имени
+            if (nameInput.value.trim() === '') {
+                showError(nameError, 'Пожалуйста, введите ваше имя.');
+                isValid = false;
+            } else {
+                clearError(nameError);
+            }
+
+
+            // Валидация Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput.value.trim() === '') {
+                showError(emailError, 'Пожалуйста, введите ваш Email.');
+                isValid = false;
+            } else if (!emailRegex.test(emailInput.value)) {
+                showError(emailError, 'Пожалуйста, введите корректный Email.');
+                isValid = false;
+            } else {
+                clearError(emailError);
+            }
+
+            // Валидация телефона (опционально, но если заполнено, то по паттерну)
+            const phonePattern = /^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/;
+            if (phoneInput.value.trim() !== '' && !phonePattern.test(phoneInput.value)) {
+                showError(phoneError, 'Пожалуйста, введите корректный номер телефона (например, +7 (XXX) XXX-XX-XX).');
+                isValid = false;
+            } else {
+                clearError(phoneError);
+            }
+
+            // Валидация комментария (опционально, но если заполнено, то мин. длина)
+            if (commentInput.value.trim() !== '' && commentInput.value.trim().length < 10) {
+                showError(commentError, 'Комментарий должен содержать не менее 10 символов.');
+                isValid = false;
+            } else {
+                clearError(commentError);
+            }
+
+            return isValid;
+        }
+
+        // --- Обработчики событий ---
+        openFormButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const title = button.dataset.formTitle;
+                openPopup(title);
+            });
+        });
+
+        closeFormBtn.addEventListener('click', closePopup);
+
+        popupOverlay.addEventListener('click', (event) => {
+            if (event.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+        myForm.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Предотвращаем стандартную отправку формы
+
+            if (validateForm()) { // Если форма валидна
+                const formData = {
+                    name: nameInput.value,
+                    email: emailInput.value,
+                    phone: phoneInput.value,
+                    comment: commentInput.value
+                };
+
+                console.log('Данные формы для отправки:', formData);
+
+                // --- СЮДА ВАШ КОД ДЛЯ ОТПРАВКИ НА СЕРВЕР ---
+                /*
+                try {
+                    const response = await fetch('/api/submit-form', { // Замените на ваш URL
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        console.log('Форма успешно отправлена:', result);
+                        alert('Ваша заявка успешно отправлена!');
+                        closePopup();
+                    } else {
+                        console.error('Ошибка при отправке формы:', response.statusText);
+                        alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.');
+                    }
+                } catch (error) {
+                    console.error('Произошла сетевая ошибка:', error);
+                    alert('Произошла сетевая ошибка. Пожалуйста, проверьте ваше интернет-соединение.');
+                }
+                */
+
+                // Демонстрация:
+                alert('Форма отправлена (имитация). Данные смотрите в консоли.');
+                closePopup();
+            } else {
+                alert('Пожалуйста, исправьте ошибки в форме.');
+            }
+        });
+
+        
+
+        // Добавляем валидацию при изменении полей
+        nameInput.addEventListener('input', () => validateForm());
+        emailInput.addEventListener('input', () => validateForm());
+        phoneInput.addEventListener('input', () => validateForm());
+        commentInput.addEventListener('input', () => validateForm());
+    });
+</script>
+</body>
+</html>

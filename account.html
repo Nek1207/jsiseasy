@@ -71,7 +71,7 @@
 
         <section class="stats">
             <div class="stats__item">
-                <div class="smoothscrolling hidden stats__item-avatar-n-levels">
+                <div class="smoothscrolling hidden-left stats__item-avatar-n-levels">
                     <!-- <div class="stats__item-avatar">
                         <img src="./media/images/bydlo_s_sortirovki_logo.png" alt="account_logo">
                         <a href="./in-development.html">Изменить фото</a>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <ul class="smoothscrolling hidden stats__item-counts">
+                <ul class="smoothscrolling hidden-left stats__item-counts">
                     <li>Пройденных курсов: <span class="yellow semibold">3</span></li>
                     <li>Решенных задач: <span class="yellow semibold">29,120</span></li>
                     <li>Просмотренных уроков: <span class="yellow semibold">1,400</span></li>
@@ -98,28 +98,30 @@
             <div class="smoothscrolling hidden line-vertical"></div>
             <div class="smoothscrolling hidden line"></div>
             <div class="stats__item">
-                <div class="smoothscrolling hidden stats__item-total">
+                <div class="smoothscrolling hidden-right stats__item-total">
                     <label for="login">Логин</label>
                     <input readonly="true" id="login" name="login" type="text" placeholder="PROJECT_NEK">
                 </div>
-                <div class="smoothscrolling hidden stats__item-total">
+                <div class="smoothscrolling hidden-right stats__item-total">
                     <label for="description">Описание профиля</label>
                     <textarea readonly="true" cols="3" rows="5" placeholder="Напишите что-нибудь о себе..." name="description" id="description"></textarea>
                 </div>
-                <div class="smoothscrolling hidden stats__item-total">
+                <div class="smoothscrolling hidden-right stats__item-total">
                     <label for="email">Электронная почта</label>
                     <input readonly="true" id="email" name="email" type="email" placeholder="Nek1207@yandex.ru">
                 </div>
-                <div class="smoothscrolling hidden stats__item-total">
+                <div class="smoothscrolling hidden-right stats__item-total">
                     <label for="phone">Номер телефона</label>
                     <input readonly="true" id="phone" name="phone" type="tel" placeholder="+7 (953) 049-14-08">
                 </div>
-                <div class="smoothscrolling hidden stats__item-total">
+                <div class="smoothscrolling hidden-right stats__item-total">
                     <label id="pass" for="pass">Пароль</label>
                     <input readonly="true" id="pass" name="pass" type="password" placeholder="**********">
                 </div>
             </div>
         </section>
+
+        <div class="smoothscrolling hidden line3"></div>
 
         <section class="medals">
             <h1 class="smoothscrolling hidden">Ваши достижения</h1>
@@ -170,6 +172,34 @@
             </div>
         </section>
 
+        <div class="smoothscrolling hidden line3"></div>
+
+         <section class="sendorder">
+            <h1 class="form-order__title smoothscrolling hidden">Подать заявку</h1>
+
+            <!-- <div id="popupOverlay" class=""> -->
+                <form id="form-order" class="smoothscrolling hidden form-order">
+                    <!-- <div class="line6 black"></div> -->
+                    <div class="form-order__inputs">
+                        <div class="form-order__inputs-item">
+                            <label for="services">Вид услуги</label>
+                            <select name="services" id="status">
+                                <option value="service1" class="semibold">Курс "JSknower1" (1,990 RUB)</option>
+                                <option value="service2" class="semibold">Курс "JSknower2" (3,490 RUB)</option>
+                                <option value="service3" class="semibold">Курс "JSknower3" (4,990 RUB)</option>
+                                <option value="service4" class="semibold">Курс "JSknower4" (6,990 RUB)</option>
+                                <option value="service5" class="semibold">Курс "JSknower5" (9,990 RUB)</option>
+                            </select>
+                        </div>
+                        <div class="form-order__inputs-item">
+                            <button class="sendinput" type="submit">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            <!-- </div> -->
+        </section>
+        
+        <div class="smoothscrolling hidden line3"></div>
 
         <section class="myorders">
             <h1 class="smoothscrolling hidden">Ваши заявки</h1>
