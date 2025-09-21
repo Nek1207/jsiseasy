@@ -41,7 +41,7 @@
     background: var(--col-dark-gray);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    border-top: 1rem solid var(--col-light-gray);
+    border-top: 1rem solid var(--col-yellow);
 }
 
 .picture {

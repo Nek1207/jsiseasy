@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
 
     const sections = document.querySelectorAll('.smoothscrolling');
         function checkSections() {
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return (
                 rect.top >= 0 &&
                 rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight * 1.2 || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth * 1.2 || document.documentElement.clientWidth)
+                rect.bottom <= (window.innerHeight * 1.34 || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth * 1.34 || document.documentElement.clientWidth)
             );
         }
 

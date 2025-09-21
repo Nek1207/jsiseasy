@@ -34,7 +34,7 @@
 /* Стили для самой формы внутри всплывающего окна */
 .popup-form {
     /* transition: all 1s ease-in-out; */
-    background-color: var(--col-light-gray);
+    background-color: var(--col-gray);
     /* padding: 1rem; */
     border-radius: var(--brd);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);

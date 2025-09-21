@@ -7,6 +7,9 @@
     flex-direction: row;
     justify-content: space-around;
     min-height: 250px;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
     height: auto;
     align-items: start;
     color: var(--col-white);
