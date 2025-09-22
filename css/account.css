@@ -39,7 +39,7 @@
     border-radius: var(--brd);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 50vw;
-    height: 80vh;
+    height: 95vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -105,7 +105,8 @@
 }
 
 
-.popup-form__inputs-item input {
+.popup-form__inputs-item input,
+.popup-form__inputs-item textarea {
    transition: all .3s; 
    width: 100%;
    min-height: 1rem;
@@ -117,7 +118,6 @@
    cursor: default;
    border: inset solid 4px var(--col-dark-yellow); 
 }
-
 
 .popup-form__inputs-item input:hover {
    transition: all .3s; 
