@@ -107,7 +107,7 @@ html::-webkit-scrollbar {
 .dark-gray-bg { background-color: var(--col-dark-gray); }
 
 textarea {
-    resize: nonex;
+    resize: none;
 }
 
 .flex {
