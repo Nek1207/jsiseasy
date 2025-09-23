@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация # JavaScript — это просто! (finalbuild!)</title>
+    <title>Регистрация # JavaScript — это просто! (v1.0.4)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/registration.css">
     <link rel="icon" type="image/x-icon" href="./media/icons/logo.svg">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/smoothscrolling.js"></script>
+    <script src="./js/registration.js"></script>
 </head>
 <body class="bg">
 
@@ -22,31 +21,37 @@
 
     <h1>Регистрация</h1>
 
-    <form action="#!" method="POST" class="registration-form">
+    <form id="regForm" class="registration-form">
         <div class="registration-form__item">
             <label for="login">Логин <span class="required">*</span></label>
-            <input id="login" name="login" type="text" placeholder="Укажите здесь Ваш логин..." required>
+            <input id="login" name="login" type="text" placeholder="Например, ivanivanov2006" required>
+            <span id="loginError" class="red error-message"></span>
         </div>
         <div class="registration-form__item">
             <label for="email">Электронная почта <span class="required">*</span></label>
-            <input id="email" name="email" type="email" placeholder="Укажите здесь Вашу электронную почту..."  required>
+            <input id="email" name="email" type="email" placeholder="Например, email12@example.com"  required>
+            <span id="emailError" class="red error-message"></span>
         </div>
         <div class="registration-form__item">
             <label for="phone">Номер телефона <span class="required">*</span></label>
-            <input id="phone" name="phone" type="tel" placeholder="Укажите здесь Ваш номер телефона..." required>
+            <input id="phone" name="phone" type="tel" pattern="^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$" placeholder="Например, +79126187352" required>
+            <span id="phoneError" class="red error-message"></span>
         </div>
         <div class="registration-form__item">
             <label for="pass">Пароль <span class="required">*</span></label>
-            <input id="pass" name="pass" type="password" placeholder="Придумайте и укажите здесь Ваш пароль..." required>
+            <input id="pass" name="pass" type="password" placeholder="Придумайте надёжный пароль..." required>
+            <span id="passError" class="red error-message"></span>
         </div>
         <div class="registration-form__item">
             <label for="passrepeat">Повтор пароля <span class="required">*</span></label>
             <input id="passrepeat" name="passrepeat" type="password" placeholder="Повторите здесь указанный Вами пароль..." required>
+            <span id="passrepeatError" class="red error-message"></span>
         </div>
         <p><span class="required">*</span>  — обязательное для заполнения поле.</p>
         <p><input id="agree" name="agree" type="checkbox" required>Я принимаю <a target="_blank" href="./in-development.html" class="for-agree">Условия использования</a> и соглашаюсь с <a target="_blank" href="./in-development.html" class="for-agree">Политикой конфиденциальности</a>.</p>
+        <span id="agreeError" class="red error-message"></span>
         <div class="registration-form__item">
-            <input class="button toReg" type="submit" value="Зарегистрироваться">
+            <button class="button toReg" type="submit" id="submitButton">Зарегистрироваться</button>
             <div class="toReg">
                 <p>Уже есть аккаунт?</p><a class="authorization-link bold" href="./authorization.html">Авторизоваться</a>
             </div>

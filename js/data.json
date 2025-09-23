@@ -4,7 +4,8 @@
         "login": "PROJECT NEK",
         "email": "Nek1207@yandex.ru",
         "phone": "+79530491408",
-        "pass": "prjctnkprjctnk"
+        "pass": "prjctnkprjctnk",
+        "description": "(c) 2025, PROJECT NEK"
     },
     "roles": {
         "1": "Standart",

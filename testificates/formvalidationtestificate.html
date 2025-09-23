@@ -132,11 +132,12 @@
     <div id="popupForm" class="popup-form">
         <span class="close-btn" id="closeFormBtn">&times;</span>
         <h2 id="formTitle"></h2>
-        <form id="myForm" novalidate> <div class="form-group">
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-            <span id="nameError" class="error-message"></span>
-        </div>
+        <form id="myForm" novalidate>
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                <span id="nameError" class="error-message"></span>
+            </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="email@example.com" required>
@@ -271,6 +272,10 @@
             }
         });
 
+
+        // ОСТАНОВИЛСЯ ЗДЕСЬ
+
+        
         myForm.addEventListener('submit', async (event) => {
             event.preventDefault(); // Предотвращаем стандартную отправку формы
 

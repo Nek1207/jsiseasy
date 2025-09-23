@@ -106,7 +106,7 @@
     font-size: var(--fz-description);
 }
 
-input[type="submit"] {
+.button {
    transition: all .3s; 
    width: 100%;
    min-height: 2rem;
@@ -117,15 +117,16 @@ input[type="submit"] {
    border-radius: 0.25em;
    font-family: "Montserrat", sans-serif;
    cursor: default;
+   text-align: center;
    border: inset solid 4px var(--col-dark-yellow); 
 }
 
-input[type="submit"]:hover {
+.button:hover {
     transition: all 3.s;
     background: var(--col-light-yellow);
 }
 
-input[type="submit"]:active {
+.button:active {
     transition: all 3.s;
     background: var(--col-dark-yellow);
 }
@@ -210,7 +211,7 @@ input[type="checkbox"] {
 .toReg {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     gap: .5rem;
 }
@@ -235,7 +236,7 @@ input[type="checkbox"] {
     .registration-form__item label {
         font-size: var(--fz-description);
     }
-    input[type="submit"] {
+    .button {
         font-size: var(--fz-description);
     }
     .registration-form__item input {
