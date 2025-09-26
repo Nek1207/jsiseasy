@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная # JavaScript — это просто! (v1.0.4)</title>
+    <title>Главная # JavaScript — это просто! (v1.0.8)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -13,6 +13,7 @@
     <script src="./js/smoothscrolling.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/authorization-check.js"></script>
+    <script src="./js/quit.js"></script>
 </head>
 <body>
 
@@ -236,7 +237,7 @@
         <div class="footer__information">
             <div class="footer__information-item">
                 <p>Дата последнего обновления</p>
-                <p>23 сентября 2025 года 10:00 GMT+5</p>
+                <p>26 сентября 2025 года 21:00 GMT+5</p>
             </div>
             <div class="footer__information-item">
                 <p>Разработано командой разработчиков</p>
@@ -287,9 +288,9 @@
         <div class="header__account">
             <a href="./in-development.html" class="header__account-item"><img src="./media/icons/navigation/nav_notifications.svg" alt="notifications"></a>
             <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account.svg" alt="account"></a>
-            <a href="./in-development.html" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></a>
+            <button id="quit" onclick="quit();" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></button>
         </div>
-    </header>=
+    </header>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./js/swiper-slider.js"></script>
 </html>

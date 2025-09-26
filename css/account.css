@@ -16,6 +16,40 @@
     text-align: center;
 }
 
+
+.show-password-icon {
+    display: block;
+    position: relative;
+    top: -35%;
+    left: 90%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1000;
+}
+
+.show-password-icon2 {
+    display: block;
+    position: relative;
+    top: -37.5px;
+    left: 85%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+#eye-show,
+#eye-show2 {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+#eye-hide,
+#eye-hide2 {
+    display: none;
+}
+
+
 /* Стили для всплывающего окна (оверлея) */
 .popup-overlay {
     /* transition: all 1s ease-in-out; */
@@ -39,7 +73,7 @@
     border-radius: var(--brd);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 50vw;
-    height: 95vh;
+    height: 80vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -49,7 +83,7 @@
 }
         
 .line6 {
-   width: 100%;
+    width: 100%;
     /* position: relative; */
     padding: 0;
     margin: 0;
@@ -89,8 +123,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: .75rem;
+    gap: .5rem;
     padding: var(--p);
+    margin: 0;
     height: 100% !important;
     width: 100%;
     height: auto;
@@ -154,7 +189,7 @@
     font-family: "Montserrat", sans-serif;
     cursor: default;
     border: solid 4px var(--col-yellow); 
-    margin-top: var(--m);
+    /* margin-top: var(--m); */
 }
 
 .changeinput:hover {

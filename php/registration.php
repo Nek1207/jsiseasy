@@ -26,7 +26,7 @@
 
     $connect = new mysqli($host, $user, $dbpass, $db);
 
-    $query = "INSERT INTO users (login, email, phone, pass, role, description, medals) VALUES ('$login', '$email', '$phone', '$pass', 0, 'отсутствует', 0);";
+    $query = "INSERT INTO users (login, email, phone, pass, role, description, medals, coursesCompleted, tasksSolved, lessonsWatched, solutionsProposed, daysOfStudying) VALUES ('$login', '$email', '$phone', '$pass', 0, 'отсутствует', 0, 0, 0, 0, 0, 0);";
 
     $connect->query($query);
 

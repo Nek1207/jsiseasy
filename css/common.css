@@ -217,6 +217,11 @@ header, main, footer, section {
     /* padding: var(--p-normal); */
 }
 
+#quit {
+    border: none;
+    background: none;
+    padding: 0;
+}
 
 body {
     border: none;

@@ -1,0 +1,35 @@
+let showPasswordIcon = document.getElementById('show-password-icon');
+
+
+function passIconChange() {
+    
+    let showPassword = document.getElementById('eye-show');
+    let hidePassword = document.getElementById('eye-hide');
+    let showPassword2 = document.getElementById('eye-show2');
+    let hidePassword2 = document.getElementById('eye-hide2');
+    let passwordModalInput = document.getElementById('passModal');
+    let passwordInput = document.getElementById('pass');
+            
+    if (passwordModalInput.type === "password") {
+        passwordModalInput.type = "text";
+        showPassword.style = "display: none;"
+        hidePassword.style = "display: block; width: 25px; height: 25px;"
+    } else {
+        passwordModalInput.type = "password";
+        showPassword.style = "display: block; width: 25px; height: 25px;"
+        hidePassword.style = "display: none;"
+    }
+    console.log("hmmmm!");
+    if (passwordInput.type === "password") {
+        console.log("WORKED!");
+        passwordInput.type = "text";
+        showPassword2.style = "display: none;"
+        hidePassword2.style = "display: block; width: 25px; height: 25px;"
+    } else {
+        passwordInput.type = "password";
+        showPassword2.style = "display: block; width: 25px; height: 25px;"
+        hidePassword2.style = "display: none;"
+    }
+
+
+};

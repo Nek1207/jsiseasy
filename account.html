@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аккаунт # JavaScript — это просто! (v1.0.4)</title>
+    <title>Аккаунт # JavaScript — это просто! (v1.0.8)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -13,8 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/smoothscrolling.js"></script>
     <script src="./js/modalwindow.js"></script>
+    <script src="./js/authorization-check.js"></script>
+    <script src="./js/passwordInput.js"></script>
+    <script src="./js/quit.js"></script>
 </head>
 <body>
+    
     <header class="header">
         <label for="burger-menu-toggle" class="burger-icon">☰</label>
         <input type="checkbox" id="burger-menu-toggle" hidden>
@@ -28,7 +32,7 @@
         <div class="header__account">
             <a href="./in-development.html" class="header__account-item"><img src="./media/icons/navigation/nav_notifications.svg" alt="notifications"></a>
             <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account.svg" alt="account"></a>
-            <a href="./in-development.html" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></a>
+            <button id="quit" onclick="quit();" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></button>
         </div>
     </header>
 
@@ -47,23 +51,27 @@
                 <div class="popup-form__inputs">
                     <div class="popup-form__inputs-item">
                         <label for="login">Логин</label>
-                        <input id="login" name="login" type="text" placeholder="Укажите здесь Ваш логин...">
+                        <input id="loginModal" name="login" type="text" placeholder="Укажите здесь Ваш логин...">
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="description">Описание профиля</label>
-                        <textarea cols="1" rows="3" placeholder="Напишите что-нибудь о себе..." name="description" id="description"></textarea>
+                        <textarea cols="1" rows="3" placeholder="Напишите что-нибудь о себе..." name="description" id="descriptionModal"></textarea>
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="email">Электронная почта</label>
-                        <input id="email" name="email" type="email" placeholder="Укажите здесь Вашу электронную почту...">
+                        <input id="emailModal" name="email" type="email" placeholder="Укажите здесь Вашу электронную почту...">
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="phone">Номер телефона</label>
-                        <input id="phone" name="phone" type="tel" placeholder="Укажите здесь Ваш номер телефона...">
+                        <input id="phoneModal" name="phone" type="tel" placeholder="Укажите здесь Ваш номер телефона...">
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="pass">Пароль</label>
-                        <input id="pass" name="pass" type="password" placeholder="Придумайте и укажите здесь Ваш пароль...">
+                        <input id="passModal" name="pass" type="password" placeholder="Придумайте и укажите здесь Ваш пароль...">
+                        <span onclick="passIconChange();" id="show-password-icon" class="show-password-icon">
+                            <img id="eye-show" src="./media/icons/navigation/nav_show.svg" alt="show">
+                            <img id="eye-hide" src="./media/icons/navigation/nav_hide.svg" alt="hide">
+                        </span>
                     </div>
                     <div class="popup-form__inputs-item">
                         <button class="changeinput" type="submit">Изменить</button>
@@ -119,8 +127,12 @@
                     <input readonly="true" id="phone" name="phone" type="tel" placeholder="+7 (953) 049-14-08">
                 </div>
                 <div class="smoothscrolling hidden-right stats__item-total">
-                    <label id="pass" for="pass">Пароль</label>
-                    <input readonly="true" id="pass" name="pass" type="password" placeholder="**********">
+                    <label id="for-pass" for="pass">Пароль</label>
+                    <input readonly="true" id="pass" name="pass" type="password" value="1.0.8_TEST">
+                    <span onclick="passIconChange();" id="show-password-icon" class="show-password-icon2">
+                        <img id="eye-show2" src="./media/icons/navigation/nav_show.svg" alt="show">
+                        <img id="eye-hide2" src="./media/icons/navigation/nav_hide.svg" alt="hide">
+                    </span>
                 </div>
             </div>
         </section>
@@ -265,7 +277,7 @@
         <div class="footer__information">
             <div class="footer__information-item">
                 <p>Дата последнего обновления</p>
-                <p>23 сентября 2025 года 10:00 GMT+5</p>
+                <p>26 сентября 2025 года 21:00 GMT+5</p>
             </div>
             <div class="footer__information-item">
                 <p>Разработано командой разработчиков</p>

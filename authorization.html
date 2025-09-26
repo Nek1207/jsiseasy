@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авторизация # JavaScript — это просто! (v1.0.4)</title>
+    <title>Авторизация # JavaScript — это просто! (v1.0.8)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/smoothscrolling.js"></script>
     <script src="./js/authorization.js"></script>
+    <script src="./js/passwordInputAuthorization.js"></script>
 </head>
 <body class="bg">
 
@@ -25,6 +26,7 @@
     <h1>Авторизация</h1>
 
     <form id="authForm" class="authorization-form">
+        <span id="authorizationError" class="red error-message"></span>
         <div class="authorization-form__item">
             <label for="login">Логин</label>
             <input id="login" name="login" type="text" placeholder="Укажите здесь Ваш логин..." required>
@@ -33,11 +35,15 @@
         <div class="authorization-form__item">
             <label for="pass">Пароль</label>
             <input id="pass" name="pass" type="password" placeholder="Укажите здесь Ваш пароль..." required>
-            <span id="loginError" class="red error-message"></span>
+            <span onclick="passIconChange();" id="show-password-icon" class="show-password-icon">
+                <img id="eye-show2" src="./media/icons/navigation/nav_show.svg" alt="show">
+                <img id="eye-hide2" src="./media/icons/navigation/nav_hide.svg" alt="hide">
+            </span>
+            <span id="passError" class="red error-message"></span>
         </div>
         <p><input id="agree" name="agree" type="checkbox">Запомнить меня</p>
         <div class="authorization-form__item">
-            <input class="button toReg" type="submit" value="Авторизоваться">
+            <button id="submitButton" class="button" type="submit">Авторизоваться</button>
             <div class="toReg">
                 <p>Нет аккаунта?</p>
                 <a class="registration-link bold" href="./registration.html">Зарегистрироваться</a>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация # JavaScript — это просто! (v1.0.4)</title>
+    <title>Регистрация # JavaScript — это просто! (v1.0.8)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="./media/icons/logo.svg">
     <script src="./js/smoothscrolling.js"></script>
     <script src="./js/registration.js"></script>
+    <script src="./js/passwordInputRegistration.js"></script>
 </head>
 <body class="bg">
 
@@ -40,18 +41,26 @@
         <div class="registration-form__item">
             <label for="pass">Пароль <span class="required">*</span></label>
             <input id="pass" name="pass" type="password" placeholder="Придумайте надёжный пароль..." required>
+            <span onclick="passIconChange();" id="show-password-icon" class="show-password-icon">
+                <img id="eye-show2" src="./media/icons/navigation/nav_show.svg" alt="show">
+                <img id="eye-hide2" src="./media/icons/navigation/nav_hide.svg" alt="hide">
+            </span>
             <span id="passError" class="red error-message"></span>
         </div>
         <div class="registration-form__item">
             <label for="passrepeat">Повтор пароля <span class="required">*</span></label>
             <input id="passrepeat" name="passrepeat" type="password" placeholder="Повторите здесь указанный Вами пароль..." required>
+            <span onclick="passIconChange();" id="show-password-icon" class="show-password-icon">
+                <!-- <img id="eye-show" src="./media/icons/navigation/nav_show.svg" alt="show"> -->
+                <!-- <img id="eye-hide" src="./media/icons/navigation/nav_hide.svg" alt="hide"> -->
+            </span>
             <span id="passrepeatError" class="red error-message"></span>
         </div>
         <p><span class="required">*</span>  — обязательное для заполнения поле.</p>
         <p><input id="agree" name="agree" type="checkbox" required>Я принимаю <a target="_blank" href="./in-development.html" class="for-agree">Условия использования</a> и соглашаюсь с <a target="_blank" href="./in-development.html" class="for-agree">Политикой конфиденциальности</a>.</p>
         <span id="agreeError" class="red error-message"></span>
         <div class="registration-form__item">
-            <button class="button toReg" type="submit" id="submitButton">Зарегистрироваться</button>
+            <button class="button" type="submit" id="submitButton">Зарегистрироваться</button>
             <div class="toReg">
                 <p>Уже есть аккаунт?</p><a class="authorization-link bold" href="./authorization.html">Авторизоваться</a>
             </div>
