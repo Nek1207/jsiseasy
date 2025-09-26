@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аккаунт # JavaScript — это просто! (v1.0.8)</title>
+    <title>Аккаунт # JavaScript — это просто! (v1.1.3)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -16,6 +16,9 @@
     <script src="./js/authorization-check.js"></script>
     <script src="./js/passwordInput.js"></script>
     <script src="./js/quit.js"></script>
+    <script src="./js/accountInfo.js"></script>
+    <script src="./js/addOrder.js"></script>
+    <script src="./js/allClientOrders.js"></script>
 </head>
 <body>
     
@@ -27,17 +30,21 @@
         <nav class="header__nav">
             <a href="./main.html" class="header__nav-item">Главная</a>
             <a href="./news.html" class="header__nav-item">Новости</a>            
-            <a href="./information.html" class="header__nav-item">Информация</a>        
+            <a href="./information.html" class="header__nav-item">Информация</a> 
+            <a id="administratorLink" href="./administrator.html" class="header__nav-item">Панель администратора</a>       
         </nav>
-        <div class="header__account">
+        <div id="authorizated" class="header__account">
             <a href="./in-development.html" class="header__account-item"><img src="./media/icons/navigation/nav_notifications.svg" alt="notifications"></a>
             <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account.svg" alt="account"></a>
             <button id="quit" onclick="quit();" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></button>
         </div>
+        <div id="notAuthorizated" class="header__account">
+            <a href="./authorization.html" class="toAuth">Войти</a >
+        </div>
     </header>
 
     <main class="main account">
-        <h1 class="smoothscrolling">Здравствуйте, <span class="yellow">PROJECT NEK<img src="./media/icons/content/star.svg" class="star" alt="star"></span>!</h1>
+        <h1 class="smoothscrolling">Здравствуйте, <span id="nickname" class="yellow">PROJECT NEK<img src="./media/icons/content/star.svg" class="star" alt="star"></span>!</h1>
        
         <button id="openFormBtn1" class="editinput">Редактировать профиль</button>
 
@@ -91,20 +98,20 @@
                     <div class="stats__item-levels">
                         <div class="stats__item-level">
                             <img src="./media/icons/content/level_progress.svg" alt="level-progress">
-                            <h1>97</h1>
+                            <h1 id="level">97</h1>
                         </div>
                         <div class="stats__item-level">
                             <h2>Уровень</h2>
-                            <p>EXP: 72,599/75,000</p>
+                            <p id="exp">EXP: 72,599/75,000</p>
                         </div>
                     </div>
                 </div>
                 <ul class="smoothscrolling hidden-left-special stats__item-counts">
-                    <li>Пройденных курсов: <span class="yellow semibold">3</span></li>
-                    <li>Решенных задач: <span class="yellow semibold">29,120</span></li>
-                    <li>Просмотренных уроков: <span class="yellow semibold">1,400</span></li>
-                    <li>Предложенных решений: <span class="yellow semibold">19,593</span></li>
-                    <li>Дней изучения: <span class="yellow semibold">1,955</span></li>
+                    <li>Пройденных курсов: <span id="coursesCompleted" class="yellow semibold">3</span></li>
+                    <li>Решенных задач: <span id="tasksSolved" class="yellow semibold">29,120</span></li>
+                    <li>Просмотренных уроков: <span id="lessonsWatched" class="yellow semibold">1,400</span></li>
+                    <li>Предложенных решений: <span id="solutionsProposed" class="yellow semibold">19,593</span></li>
+                    <li>Дней изучения: <span id="daysOfStudying" class="yellow semibold">1,955</span></li>
                 </ul>
             </div>
             <div class="smoothscrolling hidden line-vertical"></div>
@@ -128,7 +135,7 @@
                 </div>
                 <div class="smoothscrolling hidden-right stats__item-total">
                     <label id="for-pass" for="pass">Пароль</label>
-                    <input readonly="true" id="pass" name="pass" type="password" value="1.0.8_TEST">
+                    <input readonly="true" id="pass" name="pass" type="password">
                     <span onclick="passIconChange();" id="show-password-icon" class="show-password-icon2">
                         <img id="eye-show2" src="./media/icons/navigation/nav_show.svg" alt="show">
                         <img id="eye-hide2" src="./media/icons/navigation/nav_hide.svg" alt="hide">
@@ -143,21 +150,21 @@
             <h1 class="smoothscrolling hidden">Ваши достижения</h1>
             <div class="medals__inner">
                 <div class="smoothscrolling hidden medals__inner-item">
-                    <div class="medals__inner-item-image"><img src="./media/icons/content/medal-solid1.svg" alt="medal"></div>
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals/medal-solid1.svg" alt="medal"></div>
                     <div class="medals__inner-item-texts">
                         <h2><span class="purple">Veteran</span></h2>
                         <p>2025</p>
                     </div>
                 </div>
                 <div class="smoothscrolling hidden medals__inner-item">
-                    <div class="medals__inner-item-image"><img src="./media/icons/content/medal-solid2.svg" alt="medal"></div>
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals/medal-solid2.svg" alt="medal"></div>
                     <div class="medals__inner-item-texts">
                         <h2><span class="red">Master</span></h2>
                         <p>2024</p>
                     </div>
                 </div>
                 <div class="smoothscrolling hidden medals__inner-item">
-                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals_level3.svg" alt="medal"></div>
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals/medals_level3.svg" alt="medal"></div>
                     <div class="medals__inner-item-texts">
                         <h2><span class="gold">Pro III</span></h2>
                         <p>2022</p>
@@ -165,21 +172,21 @@
                 </div>
 
                 <div class="smoothscrolling hidden medals__inner-item">
-                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals_level2.svg" alt="medal"></div>
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals/medals_level2.svg" alt="medal"></div>
                     <div class="medals__inner-item-texts">
                         <h2><span class="gray">Commentator</span></h2>
                         <p>2022</p>
                     </div>
                 </div>
                 <div class="smoothscrolling hidden medals__inner-item">
-                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals_level1.svg" alt="medal"></div>
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals/medals_level1.svg" alt="medal"></div>
                     <div class="medals__inner-item-texts">
                         <h2><span class="gold">Pro II</span></h2>
                         <p>2020</p>
                     </div>
                 </div>
                 <div class="smoothscrolling hidden medals__inner-item">
-                    <div class="medals__inner-item-image"><img src="./media/icons/content/star_alternative.svg" alt="medal"></div>
+                    <div class="medals__inner-item-image"><img src="./media/icons/content/medals/star_alternative.svg" alt="medal"></div>
                     <div class="medals__inner-item-texts">
                         <h2><span class="gold">Pro I</span></h2>
                         <p>2019</p>
@@ -199,12 +206,12 @@
                     <div class="form-order__inputs">
                         <div class="form-order__inputs-item">
                             <label for="services">Выберите курс:</label>
-                            <select name="services" id="status">
-                                <option value="service1" class="semibold">Курс "JSknower1" (1,990 RUB)</option>
-                                <option value="service2" class="semibold">Курс "JSknower2" (3,490 RUB)</option>
-                                <option value="service3" class="semibold">Курс "JSknower3" (4,990 RUB)</option>
-                                <option value="service4" class="semibold">Курс "JSknower4" (6,990 RUB)</option>
-                                <option value="service5" class="semibold">Курс "JSknower5" (9,990 RUB)</option>
+                            <select name="services" id="service-status">
+                                <option id="service1" value="service1" class="semibold" selected>Курс "JSknower1"</option>
+                                <option id="service2" value="service2" class="semibold">Курс "JSknower2"</option>
+                                <option id="service3" value="service3" class="semibold">Курс "JSknower3"</option>
+                                <option id="service4" value="service4" class="semibold">Курс "JSknower4"</option>
+                                <option id="service5" value="service5" class="semibold">Курс "JSknower5"</option>
                             </select>
                         </div>
                         <div class="form-order__inputs-item">
@@ -219,7 +226,7 @@
 
         <section class="myorders">
             <h1 class="smoothscrolling hidden">Ваши заявки</h1>
-            <div class="smoothscrolling hidden myorders__inner">
+            <div id="myOrdersInner" class="smoothscrolling hidden myorders__inner">
                 <table class="myorders__inner-table">
                     <thead>
                         <tr>
@@ -268,16 +275,11 @@
             <a href="./main.html" class="footer__nav-item">Главная</a>
             <a href="./news.html" class="footer__nav-item">Новости</a>
             <a href="./information.html" class="footer__nav-item">Информация</a>
-            <a href="./account.html" class="footer__nav-item">Аккаунт</a>
-            <a href="./in-development.html" class="footer__nav-item">В разработке</a>
-            <a href="./registration.html" class="footer__nav-item">Регистрация</a>
-            <a href="./authorization.html" class="footer__nav-item">Авторизация</a>
-            <a href="./administrator.html" class="footer__nav-item">Администратор</a>
         </nav>
         <div class="footer__information">
             <div class="footer__information-item">
                 <p>Дата последнего обновления</p>
-                <p>26 сентября 2025 года 21:00 GMT+5</p>
+                <p>27 сентября 2025 года 21:00 GMT+5</p>
             </div>
             <div class="footer__information-item">
                 <p>Разработано командой разработчиков</p>

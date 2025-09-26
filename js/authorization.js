@@ -78,8 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
                sessionStorage.setItem('email', JSON.parse(result)[0].email);
                sessionStorage.setItem('phone', JSON.parse(result)[0].phone);
                sessionStorage.setItem('description', JSON.parse(result)[0].description);
+               sessionStorage.setItem('pass', JSON.parse(result)[0].pass);
                sessionStorage.setItem('medals', JSON.parse(result)[0].medals);
                sessionStorage.setItem('role', JSON.parse(result)[0].role);
+               sessionStorage.setItem('coursesCompleted', JSON.parse(result)[0].coursesCompleted);
+               sessionStorage.setItem('tasksSolved', JSON.parse(result)[0].tasksSolved);
+               sessionStorage.setItem('lessonsWatched', JSON.parse(result)[0].lessonsWatched);
+               sessionStorage.setItem('solutionsProposed', JSON.parse(result)[0].solutionsProposed);
+               sessionStorage.setItem('daysOfStudying', JSON.parse(result)[0].daysOfStudying);
+               sessionStorage.setItem('level', JSON.parse(result)[0].level);
+               sessionStorage.setItem('exp', JSON.parse(result)[0].exp);
                alert('Вы успешно авторизовались!');
                window.location.href = './account.html';
             } else {

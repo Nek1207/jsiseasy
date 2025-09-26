@@ -7,17 +7,23 @@
 
     $data = json_decode($get, true);
 
-    if (!isset($data['login'])) {
+    if (!isset($data['login']) || !isset($data['name'])) {
+        echo json_encode(['success' => false, 'message' => 'Недостаточно данных.']);
         http_response_code(400);
         exit();
     } else {
         http_response_code(200);
     }
 
+
+    // $name = htmlspecialchars($data['name']);
+    $name = $data['name'];
     $login = htmlspecialchars($data['login']);
     $email = htmlspecialchars($data['email']);
     $phone = htmlspecialchars($data['phone']);
-    $pass = htmlspecialchars($data['pass']);
+    $date = htmlspecialchars($data['date']);
+    $cost = htmlspecialchars($data['cost']);
+    $status = htmlspecialchars($data['status']);
 
     $host = 'localhost';
     $user = 'root';
@@ -26,9 +32,10 @@
 
     $connect = new mysqli($host, $user, $dbpass, $db);
 
-    $query = "INSERT INTO users (login, email, phone, pass, role, description, medals, coursesCompleted, tasksSolved, lessonsWatched, solutionsProposed, daysOfStudying, level, exp) VALUES ('$login', '$email', '$phone', '$pass', 1, 'отсутствует', 0, 0, 0, 0, 0, 0, 1, 0);";
+    $query = "INSERT INTO orders (name, login, email, phone, date, cost, status) VALUES ('$name', '$login', '$email', '$phone', '$date', $cost, '$status');";
 
     $connect->query($query);
+
 
 
 ?>

@@ -45,18 +45,7 @@
 
     while ($row = mysqli_fetch_assoc($result)) {
         $userData[] = $row;
-    }
-
-    // $_SESSION['isSignIn'] = 1;
-    // $_SESSION['id'] = $userData[0];
-    // $_SESSION['login'] = $userData[1];
-    // $_SESSION['email'] = $userData[2];
-    // $_SESSION['phone'] = $userData[3];
-    // $_SESSION['pass'] = $userData[4];
-    // $_SESSION['role'] = $userData[5];
-    // $_SESSION['description'] = $userData[6];
-    // $_SESSION['medals'] = $userData[7];
-    
+    }    
 
     // echo $login,"<br><br><br><br><br>",$pass;
     echo json_encode($userData);

@@ -34,7 +34,7 @@
     transition: all .3s;
     position: relative;
     margin-left: var(--m);
-    width: 10%;
+    width: 5%;
 }
 
 .header__nav {
@@ -44,7 +44,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: nowrap;
-    width: 45%;
+    width: 50%;
     position: relative;
     /* gap: var(--g); */
     /* gap: var(--g-small); */
@@ -72,6 +72,7 @@
 
 .header__account-item {
     transition: all .3s;
+    display: block;
 }
 
 .header__account-item:hover {

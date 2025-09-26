@@ -6,11 +6,15 @@
     <nav class="header__nav">
         <a href="./main.html" class="header__nav-item">Главная</a>
         <a href="./news.html" class="header__nav-item">Новости</a>            
-        <button id="quit" onclick="quit();" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></button>       
+        <a href="./information.html" class="header__nav-item">Информация</a>
+        <a id="administratorLink" href="./administrator.html" class="header__nav-item">Панель администратора</a>            
     </nav>
-    <div class="header__account">
+    <div id="authorizated" class="header__account">
         <a href="./in-development.html" class="header__account-item"><img src="./media/icons/navigation/nav_notifications.svg" alt="notifications"></a>
-        <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account_header.svg" alt="account"></a>
-        <a href="./main.html" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></a>
+        <a href="./account.html" class="header__account-item"><img src="./media/icons/content/account.svg" alt="account"></a>
+        <button id="quit" onclick="quit();" class="header__account-item"><img src="./media/icons/navigation/nav_quit.svg" alt="quit"></button>
+    </div>
+    <div id="notAuthorizated" class="header__account">
+        <a href="./authorization.html" class="toAuth">Войти</a >
     </div>
 </header>

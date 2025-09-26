@@ -217,6 +217,46 @@ header, main, footer, section {
     /* padding: var(--p-normal); */
 }
 
+.toAuth {
+    transition: all .3s;
+    display: block;
+    background: var(--col-black);
+    /* padding: .25rem; */
+    width: 50%;
+    border: .25rem solid var(--col-black);
+    text-align: center;
+    font-weight: 800;
+    border-radius: var(--brd2);
+    color: var(--col-white);
+    height: auto;
+    min-height: 25px;
+    font-size: var(--fz-subtitle);
+}
+
+.toAuth:hover {
+    border: .25rem solid var(--col-black);
+    background: none;
+    color: var(--col-black);
+}
+
+.toAuth:active {
+    border: .25rem solid var(--col-white);
+    background: var(--col-white);
+    color: var(--col-black);
+}
+
+#authorizated {
+    display: none;
+}
+
+#notAuthorizated {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--g);
+}
+
 #quit {
     border: none;
     background: none;

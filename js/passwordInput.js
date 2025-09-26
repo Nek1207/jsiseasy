@@ -19,9 +19,8 @@ function passIconChange() {
         showPassword.style = "display: block; width: 25px; height: 25px;"
         hidePassword.style = "display: none;"
     }
-    console.log("hmmmm!");
+
     if (passwordInput.type === "password") {
-        console.log("WORKED!");
         passwordInput.type = "text";
         showPassword2.style = "display: none;"
         hidePassword2.style = "display: block; width: 25px; height: 25px;"
