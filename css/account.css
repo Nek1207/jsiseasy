@@ -483,6 +483,8 @@
     flex-wrap: wrap;
     gap: var(--g);
     width: 100%;
+    height: auto;
+    min-height: 100px;
 }
 
 .medals__inner-item {
@@ -495,6 +497,7 @@
     gap: .3rem;
     padding: var(--p);
     width: 14%;
+    z-index: 1000;
     /* border-radius: 2rem; */
     /* background: var(--col-gray); */
     background: linear-gradient(var(--col-dark-gray) 0%, var(--col-black) 80%);

@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         });
 
         if (response.ok && response.status === 200) {
-            const result = await response.text();
+            let result = await response.text();
 
             
-            result = JSON.parse(result);
+            result = JSON.parse(result); 
 
             console.log(result);
             
@@ -49,6 +49,13 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                     table += "<tr>";
 
                     table += `<td>${element.id}</td>`;
+                    table += `<td>${element.name}</td>`;
+                    table += `<td>${element.date}</td>`;
+                    table += `<td>${element.cost}</td>`;
+
+                    if (element.status === "В процессе") { table += `<td class='in-process'>${element.status}</td>`; }
+                    if (element.status === "Отклонено") { table += `<td class='rejected'>${element.status}</td>`; }
+                    if (element.status === "Выполнено") { table += `<td class='success'>${element.status}</td>`; }
 
                     table += "</tr>";
 
@@ -56,6 +63,8 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 
                 table += "</tbody>";
                 table += "</table>";
+
+                myOrdersInner.innerHTML = table;
                 
             }
 

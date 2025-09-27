@@ -24,7 +24,6 @@ html::-webkit-scrollbar {
 
 :root {
     /* цветовая гамма */
-    --col-blue: #006FFF;
     --col-black: #1F1F1F;
     --col-dark-yellow: #695E00;
     --col-yellow: #F7DF1E;
@@ -34,8 +33,11 @@ html::-webkit-scrollbar {
     --col-light-gray: #E7E7E7;
     --col-gray: #A9A9A9;
     --col-red: #C90000;
+    --col-blue: #006FFF;
+    --col-cyan: #00FFFF;
     --col-purple: #D400FF;
     --col-green: #00CE00;
+    --col-dark-green: #136513;
     --col-white: #DFDFDF;
     --col-footer: #0A0A0A;
     
@@ -91,6 +93,8 @@ html::-webkit-scrollbar {
 .purple { color: var(--col-purple); }
 .dark-gray { color: var(--col-dark-gray); }
 .light-gray { color: var(--col-light-gray); }
+.dark-green { color: var(--col-dark-green); }
+.cyan { color: var(--col-cyan); }
 
 .white-bg { background-color: var(--col-white); }
 .black-bg { background-color: var(--col-black); }
@@ -105,6 +109,8 @@ html::-webkit-scrollbar {
 .purple-bg { background-color: var(--col-purple); }
 .light-gray-bg { background-color: var(--col-light-gray); }
 .dark-gray-bg { background-color: var(--col-dark-gray); }
+.dark-green-bg { background-color: var(--col-dark-green); }
+.cyan-bg { background-color: var(--col-cyan); }
 
 textarea {
     resize: none;

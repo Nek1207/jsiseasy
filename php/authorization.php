@@ -52,6 +52,6 @@
 
     // echo json_encode($data),"<br><br><br>",$_SESSION['isSignIn'];
 
-
+    $connect->close();
 
 ?>

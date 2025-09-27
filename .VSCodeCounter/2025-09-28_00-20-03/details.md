@@ -1,0 +1,127 @@
+# Details
+
+Date : 2025-09-28 00:20:03
+
+Directory c:\\OSPanel\\OSPanel\\domains\\localhost\\jsiseasy
+
+Total : 112 files,  8396 codes, 400 comments, 1397 blanks, all 10193 lines
+
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
+
+## Files
+| filename | language | code | comment | blank | total |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| [account.html](/account.html) | HTML | 264 | 7 | 20 | 291 |
+| [administrator.html](/administrator.html) | HTML | 239 | 0 | 9 | 248 |
+| [authorization.html](/authorization.html) | HTML | 49 | 1 | 6 | 56 |
+| [css/account.css](/css/account.css) | PostCSS | 868 | 32 | 138 | 1,038 |
+| [css/administrator.css](/css/administrator.css) | PostCSS | 399 | 9 | 54 | 462 |
+| [css/authorization.css](/css/authorization.css) | PostCSS | 263 | 17 | 55 | 335 |
+| [css/common.css](/css/common.css) | PostCSS | 375 | 32 | 82 | 489 |
+| [css/footer.css](/css/footer.css) | PostCSS | 270 | 1 | 48 | 319 |
+| [css/header.css](/css/header.css) | PostCSS | 291 | 15 | 55 | 361 |
+| [css/in-development.css](/css/in-development.css) | PostCSS | 109 | 1 | 20 | 130 |
+| [css/information.css](/css/information.css) | PostCSS | 806 | 40 | 131 | 977 |
+| [css/main.css](/css/main.css) | PostCSS | 624 | 72 | 116 | 812 |
+| [css/news.css](/css/news.css) | PostCSS | 203 | 7 | 31 | 241 |
+| [css/registration.css](/css/registration.css) | PostCSS | 248 | 13 | 46 | 307 |
+| [in-development.html](/in-development.html) | HTML | 47 | 0 | 9 | 56 |
+| [index.html](/index.html) | HTML | 165 | 0 | 11 | 176 |
+| [information.html](/information.html) | HTML | 264 | 0 | 32 | 296 |
+| [js/accountInfo.js](/js/accountInfo.js) | JavaScript | 41 | 2 | 16 | 59 |
+| [js/accountMedals.js](/js/accountMedals.js) | JavaScript | 2 | 0 | 1 | 3 |
+| [js/addOrder.js](/js/addOrder.js) | JavaScript | 50 | 0 | 22 | 72 |
+| [js/allClientOrders.js](/js/allClientOrders.js) | JavaScript | 54 | 0 | 25 | 79 |
+| [js/authorization-check.js](/js/authorization-check.js) | JavaScript | 18 | 13 | 13 | 44 |
+| [js/authorization.js](/js/authorization.js) | JavaScript | 85 | 20 | 35 | 140 |
+| [js/changeAccountInfo.js](/js/changeAccountInfo.js) | JavaScript | 179 | 8 | 38 | 225 |
+| [js/data.json](/js/data.json) | JSON | 152 | 0 | 2 | 154 |
+| [js/modalwindow.js](/js/modalwindow.js) | JavaScript | 47 | 6 | 13 | 66 |
+| [js/passwordInput.js](/js/passwordInput.js) | JavaScript | 27 | 0 | 7 | 34 |
+| [js/passwordInputAuthorization.js](/js/passwordInputAuthorization.js) | JavaScript | 15 | 0 | 6 | 21 |
+| [js/passwordInputRegistration.js](/js/passwordInputRegistration.js) | JavaScript | 27 | 0 | 9 | 36 |
+| [js/quit.js](/js/quit.js) | JavaScript | 4 | 0 | 2 | 6 |
+| [js/registration.js](/js/registration.js) | JavaScript | 158 | 6 | 38 | 202 |
+| [js/slider.js](/js/slider.js) | JavaScript | 52 | 14 | 17 | 83 |
+| [js/smoothappearing.js](/js/smoothappearing.js) | JavaScript | 0 | 13 | 6 | 19 |
+| [js/smoothscrolling.js](/js/smoothscrolling.js) | JavaScript | 30 | 1 | 4 | 35 |
+| [js/swiper-slider.js](/js/swiper-slider.js) | JavaScript | 14 | 0 | 0 | 14 |
+| [main.html](/main.html) | HTML | 240 | 25 | 31 | 296 |
+| [media/icons/content/account.svg](/media/icons/content/account.svg) | XML | 11 | 0 | 1 | 12 |
+| [media/icons/content/account\_header.svg](/media/icons/content/account_header.svg) | XML | 1 | 0 | 0 | 1 |
+| [media/icons/content/arrow\_down\_red.svg](/media/icons/content/arrow_down_red.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/icons/content/arrow\_up\_green.svg](/media/icons/content/arrow_up_green.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/icons/content/chalkboard\_person.svg](/media/icons/content/chalkboard_person.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/content/check-list.svg](/media/icons/content/check-list.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/content/clock.svg](/media/icons/content/clock.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/content/comment.svg](/media/icons/content/comment.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/icons/content/courses1.svg](/media/icons/content/courses1.svg) | XML | 35 | 0 | 1 | 36 |
+| [media/icons/content/courses2.svg](/media/icons/content/courses2.svg) | XML | 35 | 0 | 1 | 36 |
+| [media/icons/content/courses3.svg](/media/icons/content/courses3.svg) | XML | 35 | 0 | 1 | 36 |
+| [media/icons/content/courses4.svg](/media/icons/content/courses4.svg) | XML | 35 | 0 | 1 | 36 |
+| [media/icons/content/courses5.svg](/media/icons/content/courses5.svg) | XML | 62 | 0 | 1 | 63 |
+| [media/icons/content/error.svg](/media/icons/content/error.svg) | XML | 5 | 0 | 1 | 6 |
+| [media/icons/content/in-development.svg](/media/icons/content/in-development.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/information.svg](/media/icons/content/information.svg) | XML | 4 | 0 | 1 | 5 |
+| [media/icons/content/level\_progress.svg](/media/icons/content/level_progress.svg) | XML | 4 | 0 | 1 | 5 |
+| [media/icons/content/loading.svg](/media/icons/content/loading.svg) | XML | 8 | 0 | 1 | 9 |
+| [media/icons/content/medals/1.svg](/media/icons/content/medals/1.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/10.svg](/media/icons/content/medals/10.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/11.svg](/media/icons/content/medals/11.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/12.svg](/media/icons/content/medals/12.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/13.svg](/media/icons/content/medals/13.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/2.svg](/media/icons/content/medals/2.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/3.svg](/media/icons/content/medals/3.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/4.svg](/media/icons/content/medals/4.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/5.svg](/media/icons/content/medals/5.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/6.svg](/media/icons/content/medals/6.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/7.svg](/media/icons/content/medals/7.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/8.svg](/media/icons/content/medals/8.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/9.svg](/media/icons/content/medals/9.svg) | XML | 11 | 1 | 1 | 13 |
+| [media/icons/content/medals/medal-solid1.svg](/media/icons/content/medals/medal-solid1.svg) | XML | 14 | 0 | 1 | 15 |
+| [media/icons/content/medals/medal-solid2.svg](/media/icons/content/medals/medal-solid2.svg) | XML | 14 | 0 | 1 | 15 |
+| [media/icons/content/medals/medals\_level1.svg](/media/icons/content/medals/medals_level1.svg) | XML | 4 | 0 | 1 | 5 |
+| [media/icons/content/medals/medals\_level2.svg](/media/icons/content/medals/medals_level2.svg) | XML | 4 | 0 | 1 | 5 |
+| [media/icons/content/medals/medals\_level3.svg](/media/icons/content/medals/medals_level3.svg) | XML | 22 | 0 | 1 | 23 |
+| [media/icons/content/medals/star\_alternative.svg](/media/icons/content/medals/star_alternative.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/content/star.svg](/media/icons/content/star.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/content/star\_alternative.svg](/media/icons/content/star_alternative.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/content/star\_alternative\_empty.svg](/media/icons/content/star_alternative_empty.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/content/success.svg](/media/icons/content/success.svg) | XML | 5 | 0 | 1 | 6 |
+| [media/icons/content/watches.svg](/media/icons/content/watches.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/icons/cursors/cursor\_diamond\_active.svg](/media/icons/cursors/cursor_diamond_active.svg) | XML | 57 | 1 | 1 | 59 |
+| [media/icons/cursors/cursor\_diamond\_default.svg](/media/icons/cursors/cursor_diamond_default.svg) | XML | 6 | 1 | 1 | 8 |
+| [media/icons/cursors/cursor\_diamond\_pointer.svg](/media/icons/cursors/cursor_diamond_pointer.svg) | XML | 15 | 1 | 1 | 17 |
+| [media/icons/logo.svg](/media/icons/logo.svg) | XML | 16 | 0 | 1 | 17 |
+| [media/icons/navigation/nav\_back.svg](/media/icons/navigation/nav_back.svg) | XML | 5 | 0 | 1 | 6 |
+| [media/icons/navigation/nav\_hide.svg](/media/icons/navigation/nav_hide.svg) | XML | 1 | 0 | 0 | 1 |
+| [media/icons/navigation/nav\_home.svg](/media/icons/navigation/nav_home.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/icons/navigation/nav\_notifications.svg](/media/icons/navigation/nav_notifications.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/navigation/nav\_quit.svg](/media/icons/navigation/nav_quit.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/icons/navigation/nav\_search.svg](/media/icons/navigation/nav_search.svg) | XML | 10 | 0 | 1 | 11 |
+| [media/icons/navigation/nav\_settings.svg](/media/icons/navigation/nav_settings.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/icons/navigation/nav\_show.svg](/media/icons/navigation/nav_show.svg) | XML | 1 | 0 | 0 | 1 |
+| [media/icons/navigation/nav\_studying.svg](/media/icons/navigation/nav_studying.svg) | XML | 3 | 0 | 1 | 4 |
+| [media/images/content1.svg](/media/images/content1.svg) | XML | 12 | 0 | 1 | 13 |
+| [media/images/content2.svg](/media/images/content2.svg) | XML | 8 | 0 | 1 | 9 |
+| [media/images/content3.svg](/media/images/content3.svg) | XML | 1 | 0 | 0 | 1 |
+| [media/images/content4.svg](/media/images/content4.svg) | XML | 1 | 0 | 0 | 1 |
+| [media/images/content5.svg](/media/images/content5.svg) | XML | 1 | 0 | 0 | 1 |
+| [media/images/content6.svg](/media/images/content6.svg) | XML | 1 | 0 | 0 | 1 |
+| [news.html](/news.html) | HTML | 163 | 0 | 14 | 177 |
+| [php/addOrder.php](/php/addOrder.php) | PHP | 28 | 1 | 12 | 41 |
+| [php/allClientOrders.php](/php/allClientOrders.php) | PHP | 20 | 8 | 20 | 48 |
+| [php/authorization-check.php](/php/authorization-check.php) | PHP | 20 | 0 | 7 | 27 |
+| [php/authorization.php](/php/authorization.php) | PHP | 28 | 9 | 20 | 57 |
+| [php/changeAccountInfo.php](/php/changeAccountInfo.php) | PHP | 40 | 7 | 12 | 59 |
+| [php/registration.php](/php/registration.php) | PHP | 24 | 0 | 11 | 35 |
+| [registration.html](/registration.html) | HTML | 64 | 3 | 7 | 74 |
+| [structure/footer.html](/structure/footer.html) | HTML | 45 | 0 | 0 | 45 |
+| [structure/head.html](/structure/head.html) | HTML | 16 | 0 | 0 | 16 |
+| [structure/header.html](/structure/header.html) | HTML | 20 | 0 | 0 | 20 |
+| [testificates/formvalidationtestificate.html](/testificates/formvalidationtestificate.html) | HTML | 288 | 0 | 49 | 337 |
+| [testificates/modalwindowalternativetestificate.html](/testificates/modalwindowalternativetestificate.html) | HTML | 92 | 0 | 21 | 113 |
+| [testificates/modalwindowtestificate.html](/testificates/modalwindowtestificate.html) | HTML | 96 | 0 | 11 | 107 |
+| [testificates/passwordinputtestificate.html](/testificates/passwordinputtestificate.html) | HTML | 82 | 0 | 11 | 93 |
+
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)

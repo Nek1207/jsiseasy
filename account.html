@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аккаунт # JavaScript — это просто! (v1.1.3)</title>
+    <title>Аккаунт # JavaScript — это просто! (v1.1.9)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -19,6 +19,8 @@
     <script src="./js/accountInfo.js"></script>
     <script src="./js/addOrder.js"></script>
     <script src="./js/allClientOrders.js"></script>
+    <script src="./js/changeAccountInfo.js"></script>
+    <script src="./js/accountMedals.js"></script>
 </head>
 <body>
     
@@ -44,7 +46,7 @@
     </header>
 
     <main class="main account">
-        <h1 class="smoothscrolling">Здравствуйте, <span id="nickname" class="yellow">PROJECT NEK<img src="./media/icons/content/star.svg" class="star" alt="star"></span>!</h1>
+        <h1 class="smoothscrolling">Здравствуйте, <span id="nickname" class="yellow">PROJECT NEK<img src="./media/icons/content/star.svg" class="star" alt="star"></span> !</h1>
        
         <button id="openFormBtn1" class="editinput">Редактировать профиль</button>
 
@@ -59,18 +61,22 @@
                     <div class="popup-form__inputs-item">
                         <label for="login">Логин</label>
                         <input id="loginModal" name="login" type="text" placeholder="Укажите здесь Ваш логин...">
+                        <span id="loginErrorModal" class="semibold red error-message"></span>
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="description">Описание профиля</label>
                         <textarea cols="1" rows="3" placeholder="Напишите что-нибудь о себе..." name="description" id="descriptionModal"></textarea>
+                        <span id="descriptionErrorModal" class="semibold red error-message"></span>
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="email">Электронная почта</label>
                         <input id="emailModal" name="email" type="email" placeholder="Укажите здесь Вашу электронную почту...">
+                        <span id="emailErrorModal" class="semibold red error-message"></span>
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="phone">Номер телефона</label>
                         <input id="phoneModal" name="phone" type="tel" placeholder="Укажите здесь Ваш номер телефона...">
+                        <span id="phoneErrorModal" class="semibold red error-message"></span>
                     </div>
                     <div class="popup-form__inputs-item">
                         <label for="pass">Пароль</label>
@@ -79,6 +85,7 @@
                             <img id="eye-show" src="./media/icons/navigation/nav_show.svg" alt="show">
                             <img id="eye-hide" src="./media/icons/navigation/nav_hide.svg" alt="hide">
                         </span>
+                        <span id="passErrorModal" class="semibold red error-message"></span>
                     </div>
                     <div class="popup-form__inputs-item">
                         <button class="changeinput" type="submit">Изменить</button>
@@ -148,8 +155,8 @@
 
         <section class="medals">
             <h1 class="smoothscrolling hidden">Ваши достижения</h1>
-            <div class="medals__inner">
-                <div class="smoothscrolling hidden medals__inner-item">
+            <div id="myMedalsInner" class="medals__inner">
+                <!-- <div class="smoothscrolling hidden medals__inner-item">
                     <div class="medals__inner-item-image"><img src="./media/icons/content/medals/medal-solid1.svg" alt="medal"></div>
                     <div class="medals__inner-item-texts">
                         <h2><span class="purple">Veteran</span></h2>
@@ -190,9 +197,10 @@
                     <div class="medals__inner-item-texts">
                         <h2><span class="gold">Pro I</span></h2>
                         <p>2019</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
+            
         </section>
 
         <div class="smoothscrolling hidden line3"></div>
@@ -227,40 +235,7 @@
         <section class="myorders">
             <h1 class="smoothscrolling hidden">Ваши заявки</h1>
             <div id="myOrdersInner" class="smoothscrolling hidden myorders__inner">
-                <table class="myorders__inner-table">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Наименование заявки</th>
-                            <th>Дата подачи</th>
-                            <th>Стоимость</th>
-                            <th>Статус</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3</td>
-                            <td>Курс "JSknower3"</td>
-                            <td>11.09.2025 13:01 (GMT+5)</td>
-                            <td>4990</td>
-                            <td class="rejected">Отклонено</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Курс "JSknower2"</td>
-                            <td>11.09.2025 11:38 (GMT+5)</td>
-                            <td>3490</td>
-                            <td class="in-process">В процессе</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Курс "JSknower1"</td>
-                            <td>11.09.2025 03:54 (GMT+5)</td>
-                            <td>1990</td>
-                            <td class="success">Выполнено</td>
-                        </tr>
-                    </tbody>
-                </table>
+               
             </div>
         </section>
     </main>
@@ -279,7 +254,7 @@
         <div class="footer__information">
             <div class="footer__information-item">
                 <p>Дата последнего обновления</p>
-                <p>27 сентября 2025 года 21:00 GMT+5</p>
+                <p>28 сентября 2025 года 03:00 GMT+5</p>
             </div>
             <div class="footer__information-item">
                 <p>Разработано командой разработчиков</p>

@@ -43,4 +43,6 @@
 
     echo json_encode($orderData);
 
+    $connect->close();
+
 ?>

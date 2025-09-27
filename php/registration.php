@@ -30,5 +30,6 @@
 
     $connect->query($query);
 
+    $connect->close();
 
 ?>

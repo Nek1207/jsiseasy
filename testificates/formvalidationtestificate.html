@@ -225,7 +225,7 @@
 
 
             // Валидация Email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailRegex = `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`;
             if (emailInput.value.trim() === '') {
                 showError(emailError, 'Пожалуйста, введите ваш Email.');
                 isValid = false;
