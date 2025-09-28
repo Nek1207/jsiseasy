@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     orderForm.addEventListener('submit', async (event) => {
 
+        event.preventDefault();
         
         let date = new Date();
 
@@ -27,8 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const selectedCourse = courses.options[courses.selectedIndex].text;
         
-        event.preventDefault();
-
         const FormDataOrders = {
             name: String(selectedCourse),
             login: String(sessionStorage.getItem('login')),

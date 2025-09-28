@@ -1,0 +1,78 @@
+Date : 2025-09-28 22:26:14
+Directory : c:\OSPanel\OSPanel\domains\localhost\jsiseasy
+Total : 41 files,  256 codes, -9 comments, 162 blanks, all 409 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |          5 |        225 |          2 |        109 |        336 |
+| XML        |         28 |         90 |         -8 |          3 |         85 |
+| PHP        |          4 |         72 |          0 |         50 |        122 |
+| PostCSS    |          2 |          9 |          0 |          0 |          9 |
+| HTML       |          2 |       -140 |         -3 |          0 |       -143 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                          | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                             |         41 |        256 |         -9 |        162 |        409 |
+| . (Files)                                                                                     |          2 |       -140 |         -3 |          0 |       -143 |
+| css                                                                                           |          2 |          9 |          0 |          0 |          9 |
+| js                                                                                            |          5 |        225 |          2 |        109 |        336 |
+| media                                                                                         |         28 |         90 |         -8 |          3 |         85 |
+| media\icons                                                                                   |         28 |         90 |         -8 |          3 |         85 |
+| media\icons\content                                                                           |         22 |         27 |        -13 |         -3 |         11 |
+| media\icons\content\medals                                                                    |         21 |         17 |        -13 |         -4 |          0 |
+| media\icons\social                                                                            |          6 |         63 |          5 |          6 |         74 |
+| php                                                                                           |          4 |         72 |          0 |         50 |        122 |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                      | language   | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\account.html                                    | HTML       |        -40 |         -3 |          0 |        -43 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\administrator.html                              | HTML       |       -100 |          0 |          0 |       -100 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\css\account.css                                 | PostCSS    |          3 |          0 |          0 |          3 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\css\common.css                                  | PostCSS    |          6 |          0 |          0 |          6 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\js\accountInfo.js                               | JavaScript |          2 |          0 |          0 |          2 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\js\accountMedals.js                             | JavaScript |         34 |          2 |         17 |         53 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\js\addOrder.js                                  | JavaScript |          0 |          0 |         -1 |         -1 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\js\administatorTables.js                        | JavaScript |        111 |          0 |         43 |        154 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\js\administratorChangeForms.js                  | JavaScript |         78 |          0 |         50 |        128 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\1.svg                | XML        |          4 |         -1 |          0 |          3 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\10.svg               | XML        |          2 |         -1 |          0 |          1 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\11.svg               | XML        |          0 |         -1 |          0 |         -1 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\12.svg               | XML        |         13 |         -1 |          0 |         12 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\13.svg               | XML        |         11 |         -1 |          0 |         10 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\14.svg               | XML        |         14 |          0 |          1 |         15 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\15.svg               | XML        |         14 |          0 |          1 |         15 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\2.svg                | XML        |          7 |         -1 |          0 |          6 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\3.svg                | XML        |         -2 |         -1 |          0 |         -3 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\4.svg                | XML        |          8 |         -1 |          0 |          7 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\5.svg                | XML        |         13 |         -1 |          0 |         12 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\6.svg                | XML        |         -2 |         -1 |          0 |         -3 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\7.svg                | XML        |         -2 |         -1 |          0 |         -3 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\8.svg                | XML        |          3 |         -1 |          0 |          2 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\9.svg                | XML        |          2 |         -1 |          0 |          1 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\medal-solid1.svg     | XML        |        -14 |          0 |         -1 |        -15 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\medal-solid2.svg     | XML        |        -14 |          0 |         -1 |        -15 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\medals_level1.svg    | XML        |         -4 |          0 |         -1 |         -5 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\medals_level2.svg    | XML        |         -4 |          0 |         -1 |         -5 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\medals_level3.svg    | XML        |        -22 |          0 |         -1 |        -23 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\medals\star_alternative.svg | XML        |        -10 |          0 |         -1 |        -11 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\content\star2.svg                   | XML        |         10 |          0 |          1 |         11 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\social\bandcamp.svg                 | XML        |          6 |          1 |          1 |          8 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\social\square-github.svg            | XML        |         18 |          1 |          1 |         20 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\social\square-instagram.svg         | XML        |         18 |          1 |          1 |         20 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\social\square-youtube.svg           | XML        |          9 |          1 |          1 |         11 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\social\square_vk.svg                | XML        |          9 |          1 |          1 |         11 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\media\icons\social\telegram.svg                 | XML        |          3 |          0 |          1 |          4 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\php\allOrdersInfo.php                           | PHP        |         19 |          0 |         14 |         33 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\php\allUsersInfo.php                            | PHP        |         19 |          0 |         14 |         33 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\php\changeOrderStatus.php                       | PHP        |         17 |          0 |         11 |         28 |
+| c:\OSPanel\OSPanel\domains\localhost\jsiseasy\php\changeUserRole.php                          | PHP        |         17 |          0 |         11 |         28 |
+| Total                                                                                         |            |        256 |         -9 |        162 |        409 |
++-----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

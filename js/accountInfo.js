@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         solutionsProposed.innerText = sessionStorage.getItem('solutionsProposed');
         daysOfStudying.innerText = sessionStorage.getItem('daysOfStudying');
 
-        if (sessionStorage.getItem('role') >= 3) {
+        if (sessionStorage.getItem('role') == 3) {
             nickname.innerHTML = `<img src='./media/icons/content/star.svg' class='star' alt='star'>${sessionStorage.getItem('login')}`;
+        } else if (sessionStorage.getItem('role') == 4) {
+            nickname.innerHTML = `<img src='./media/icons/content/star2.svg' class='star' alt='star2'>${sessionStorage.getItem('login')}`;
         } else {
             nickname.innerText = sessionStorage.getItem('login');
         }

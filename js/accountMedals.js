@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
 
-    const medals = ['None', 'Beginner', 'Intermediate', 'Pro I', 'Pro II', 'Pro III', 'Master degree', 'Veteran', 'E.A.G.L.E.', 'Quantum Computer', 'Commentator', 'VIP', 'Record holder', 'Teacher', 'Explainer', 'Debugger'];
+    const medals = ['None', 'Beginner', 'Intermediate', 'Pro I', 'Pro II', 'Pro III', 'Master degree', 'Veteran', 'Commentator', 'VIP', 'Record holder', 'Teacher', 'Explainer', 'Debugger', 'E.A.G.L.E.', 'Quantum Computer'];
 
     let myMedalsInner = document.getElementById('myMedalsInner');
 
@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (i == 7) { medalTitleColor = 'purple'; }
             if (i == 8) { medalTitleColor = 'gray'; }
             if (i == 9) { medalTitleColor = 'gold'; }
-            if (i == 10) { medalTitleColor = 'blue'; }
-            if (i == 11) { medalTitleColor = 'green'; }
-            if (i == 12) { medalTitleColor = 'cyan'; }
+            if (i == 10) { medalTitleColor = 'dark-green'; }
+            if (i == 11) { medalTitleColor = 'dark-green'; }
+            if (i == 12) { medalTitleColor = 'dark-green'; }
             if (i == 13) { medalTitleColor = 'dark-green'; }
             if (i == 14) { medalTitleColor = 'white'; }
-            if (i == 15) { medalTitleColor = 'purple'; }
+            if (i == 15) { medalTitleColor = 'cyan'; }
 
             medalsInnerItem += `<h2><span class="${medalTitleColor}">${medals[i]}</span></h2>`;
                         
