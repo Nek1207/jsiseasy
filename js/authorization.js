@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
       let isValid = true;
 
       if (loginInput.value === '') {
-         showError(loginError, 'Пожалуйста, укажите Ваш логин.');
+         showError(loginError, 'Пожалуйста, укажите Ваш логин');
          isValid = false;
       } else {
          hideError(loginError);
       }
 
       if (passInput.value === '') {
-            showError(passError, 'Пожалуйста, укажите Ваш пароль.');
+            showError(passError, 'Пожалуйста, укажите Ваш пароль');
             isValid = false;
         } else {
             hideError(passError);

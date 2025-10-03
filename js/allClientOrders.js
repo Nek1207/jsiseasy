@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             
 
             if (result[0] == undefined || result == null) {
-                myOrdersInner.innerHTML = '<h2>У вас пока нет заявок.</h2>';
+                myOrdersInner.innerHTML = '<h2>У вас пока нет заявок</h2>';
             } else {
                 let table = "<table class='myorders__inner-table'>";
                 table += "<thead>";

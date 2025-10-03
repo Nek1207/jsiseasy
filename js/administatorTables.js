@@ -6,7 +6,20 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     let usersInner = document.getElementById('usersInner');
 
 
+    let deleteDataLine = document.getElementById('deleteDataLine');
+    let deletedDataSection = document.getElementById('deletedDataSection');
+
+
     const data = {};
+
+
+    if (sessionStorage.getItem('role') <= 2) {
+        deleteDataLine.style = 'display: none;';
+        deletedDataSection.style = 'display: none;';
+    } else {
+        deleteDataLine.style = 'display: flex;';
+        deletedDataSection.style = 'display: flex;';
+    }
 
     try {
         let response = await fetch('http://localhost/jsiseasy/php/allOrdersInfo.php', {
@@ -25,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             console.log(result);
 
             if (result[0] == undefined || result == null) {
-                ordersInner.innerHTML = '<h2>Оставленных заявок не найдено.</h2>';
+                ordersInner.innerHTML = '<h2>Оставленных заявок не найдено</h2>';
             } else {
                 let table = "<table class='orders__inner-table'>";
                 table += "<thead>";
@@ -98,7 +111,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             console.log(result);
 
             if (result[0] == undefined || result == null) {
-                usersInner.innerHTML = '<h2>Зарегистрированных пользователей не найдено.</h2>';
+                usersInner.innerHTML = '<h2>Зарегистрированных пользователей не найдено</h2>';
             } else {
                 let table = "<table class='users__inner-table'>";
                 table += "<thead>";

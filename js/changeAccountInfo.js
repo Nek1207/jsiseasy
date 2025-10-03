@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     isValid = true;
                     sessionStorage.setItem('login', loginInputModal.value);
                 } else {
-                    showError(loginErrorModal, 'Пожалуйста, укажите логин, отличный от текущего.')
+                    showError(loginErrorModal, 'Пожалуйста, укажите логин, отличный от текущего')
                     isValid = false;
                 }
             } else {
-                showError(loginErrorModal, 'Пожалуйста, укажите корректный логин (не менее 8 символов и на латинице).')
+                showError(loginErrorModal, 'Пожалуйста, укажите корректный логин (не менее 8 символов и обязательно на латинице)')
                 isValid = false;
             }
         }
@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     sessionStorage.setItem('email', emailInputModal.value);
                     isValid = true;
                 } else {
-                    showError(emailErrorModal, 'Пожалуйста, укажите электронную почту, отличную от текущего.')
+                    showError(emailErrorModal, 'Пожалуйста, укажите электронную почту, отличную от текущего')
                     isValid = false;
                 }
             } else {
-                showError(emailErrorModal, 'Пожалуйста, укажите корректную электронную почту.')
+                showError(emailErrorModal, 'Пожалуйста, укажите корректную электронную почту')
                 isValid = false;
             }
         }
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sessionStorage.setItem('description', descriptionInputModal.value);
                 isValid = true;
             } else {
-                showError(descriptionErrorModal, 'Пожалуйста, укажите электронную почту, отличную от текущего.')
+                showError(descriptionErrorModal, 'Пожалуйста, укажите электронную почту, отличную от текущего')
                 isValid = false;
             }
         }
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     sessionStorage.setItem('pass', passInputModal.value);
                     isValid = true;
                 } else {
-                    showError(loginErrorModal, 'Пожалуйста, укажите пароль, отличный от текущего.')
+                    showError(loginErrorModal, 'Пожалуйста, укажите пароль, отличный от текущего')
                     isValid = false;
                 }
             } else {
-                showError(loginErrorModal, 'Пожалуйста, укажите корректный пароль (не менее 8 символов и на латинице).')
+                showError(loginErrorModal, 'Пожалуйста, укажите корректный пароль (не менее 8 символов и на латинице)')
                 isValid = false;
             }
         }

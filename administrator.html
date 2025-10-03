@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Панель администратора # JavaScript — это просто! (v1.2.4)</title>
+    <title>Панель администратора # JavaScript — это просто! (v1.2.8)</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -16,6 +16,7 @@
     <script src="./js/authorization-check.js"></script>
     <script src="./js/administatorTables.js"></script>
     <script src="./js/administratorChangeForms.js"></script>
+    <script src="./js/administratorDeleteForms.js"></script>
 </head>
 <body>
     <header class="header">
@@ -61,7 +62,7 @@
                     <h1>Роли пользователей</h1>
                     <div class="change__item-id">
                         <label for="userid">ID пользователя</label>
-                        <input id="userid" name="userid" type="number" placeholder="Укажите ID пользователя здесь...">
+                        <input id="userid" name="userid" type="number" min="0" placeholder="Укажите ID пользователя здесь...">
                     </div>
                     <div class="change__item-role">
                         <label for="role">Роль</label>
@@ -78,7 +79,7 @@
                     <h1>Заявки на покупку курсов</h1>
                     <div class="change__item-id">
                         <label for="orderid">ID заявки</label>
-                        <input id="orderid" name="orderid" type="number" placeholder="Укажите ID заявки здесь...">
+                        <input id="orderid" name="orderid" type="number" min="0" placeholder="Укажите ID заявки здесь...">
                     </div>
                     <div class="change__item-status">
                         <label for="status">Статус</label>
@@ -92,7 +93,32 @@
                 </form>
             </div>
         </section>
-    </main>
+      
+        
+        <div id="deleteDataLine" class="smoothscrolling hidden line3"></div>
+        <section id="deletedDataSection" class="change">
+            <h1 class="smoothscrolling hidden">Удаление данных</h1>
+            <div class="change__inner">
+                <form id="deleteUserForm" class="smoothscrolling hidden-left-special change__inner-item">
+                    <h1>Удаление пользователей</h1>
+                    <div class="change__item-id">
+                        <label for="deleteuserid">ID пользователя</label>
+                        <input id="deleteuserid" name="deleteuserid" type="number" min="0" placeholder="Укажите ID пользователя здесь...">
+                    </div>
+                    <button class="changeinput" id="deleteUser" type="submit">Удалить</button>
+                </form>
+                <form id="deleteOrderForm" class="smoothscrolling hidden-right-special change__inner-item">
+                    <h1>Удаление заявок</h1>
+                    <div class="change__item-id">
+                        <label for="deleteorderid">ID заявки</label>
+                        <input id="deleteorderid" name="deleteorderid" type="number" min="0" placeholder="Укажите ID заявки здесь...">
+                    </div>
+                    <button class="changeinput" id="deleteOrder" type="submit">Удалить</button>
+                </form>
+            </div>
+        </section>
+
+    </main> 
 
 
     <footer class="footer">
@@ -108,7 +134,7 @@
         <div class="footer__information">
             <div class="footer__information-item">
                 <p>Дата последнего обновления</p>
-                <p>28 сентября 2025 года 22:30 GMT+5</p>
+                <p>3 октября 2025 года 11:30 GMT+5</p>
             </div>
             <div class="footer__information-item">
                 <p>Разработано командой разработчиков</p>
