@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     regForm.addEventListener('submit', async (event) => {
-        hideErrorMessagesI();
+        hideErrorMessages();
 
         event.preventDefault();
 
@@ -177,6 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             console.log('Данные формы для отправки: ',formData);
+            // alert('TEST!!!!');
 
             try {
                 let response = await fetch('http://localhost/jsiseasy/php/registration.php', {

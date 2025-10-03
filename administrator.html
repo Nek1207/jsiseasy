@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Панель администратора # JavaScript — это просто! (v1.2.8)</title>
+    <title>Панель администратора # JavaScript — это просто! <span id="version"></span></title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -17,6 +17,7 @@
     <script src="./js/administatorTables.js"></script>
     <script src="./js/administratorChangeForms.js"></script>
     <script src="./js/administratorDeleteForms.js"></script>
+    <script src="./js/common.js"></script>
 </head>
 <body>
     <header class="header">
@@ -134,7 +135,7 @@
         <div class="footer__information">
             <div class="footer__information-item">
                 <p>Дата последнего обновления</p>
-                <p>3 октября 2025 года 11:30 GMT+5</p>
+                <p id="releaseDate"></p>
             </div>
             <div class="footer__information-item">
                 <p>Разработано командой разработчиков</p>

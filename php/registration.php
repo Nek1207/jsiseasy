@@ -7,12 +7,14 @@
 
     $data = json_decode($get, true);
 
-    if (!isset($data['login'])) {
-        http_response_code(400);
-        exit();
-    } else {
-        http_response_code(200);
-    }
+    print_r($data);
+
+    // if (!isset($data['login'])) {
+    //     http_response_code(400);
+    //     exit();
+    // } else {
+    //     http_response_code(200);
+    // }
 
     $login = htmlspecialchars($data['login']);
     $email = htmlspecialchars($data['email']);
@@ -31,5 +33,8 @@
     $connect->query($query);
 
     $connect->close();
+
+    // echo "Successfully";
+    echo $login," | ",$email," | ",$phone," | ",$pass," |";
 
 ?>

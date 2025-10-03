@@ -7,13 +7,13 @@
 
     $data = json_decode($get, true);
 
-    if (!isset($data['login']) || !isset($data['name'])) {
-        echo json_encode(['success' => false, 'message' => 'Недостаточно данных.']);
-        http_response_code(400);
-        exit();
-    } else {
-        http_response_code(200);
-    }
+    // if (!isset($data['login']) || !isset($data['name'])) {
+    //     echo json_encode(['success' => false, 'message' => 'Недостаточно данных.']);
+    //     http_response_code(400);
+    //     exit();
+    // } else {
+    //     http_response_code(200);
+    // }
 
 
     // $name = htmlspecialchars($data['name']);
